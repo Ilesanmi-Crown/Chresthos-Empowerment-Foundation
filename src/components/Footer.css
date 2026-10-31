@@ -1,0 +1,675 @@
+/* ==========================================================================
+   FOOTER COMPONENT STYLING
+   Strictly replicated from Figma:
+   - Desktop Source of Truth: Frame 'website design' (Node 617:1112)
+   - Mobile Source of Truth: Frame 'iPhone 16 & 17 Pro Max - 1' (Node 617:2011)
+   ========================================================================== */
+
+.figma-footer {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Outer Purple Canvas (Figma Rectangle 118: Node 617:1958) */
+.footer-canvas {
+  position: relative;
+  width: 100%;
+  max-width: var(--figma-desktop-w, 1440px);
+  margin: 0 auto;
+  background-color: var(--color-primary, #8a38f5);
+  border-radius: 0;
+  overflow: hidden;
+  padding: 130px 48px clamp(130px, 15vw, 205px);
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Background Dark Geometric Facet Accents (Figma dark subtract layers with rgba(0,0,0,0.20)) */
+.footer-accents {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Figma Rectangle 140: 202.7px x 204.5px, Radius 1000px, rgba(0,0,0,0.20) */
+.accent-circle-top-right {
+  position: absolute;
+  top: -63px;
+  right: 48px;
+  width: 203px;
+  height: 205px;
+  border-radius: 1000px;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+/* Figma Subtract 617:1962: 210px x 93.2px */
+.accent-subtract-top-left {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 210px;
+  height: 93px;
+  border-radius: 0 0 100px 0;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+/* Figma Subtract 617:1976: 536px x 82.8px */
+.accent-subtract-top-center {
+  position: absolute;
+  top: 0;
+  left: 54%;
+  width: 536px;
+  height: 83px;
+  transform: translateX(-50%);
+  border-radius: 0 0 50px 50px;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+/* Figma Subtract 617:1965: 102.8px x 149.2px */
+.accent-subtract-left {
+  position: absolute;
+  top: 36%;
+  left: 0;
+  width: 103px;
+  height: 149px;
+  border-radius: 0 75px 75px 0;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+/* Figma Subtract 617:1987: 149.2px x 208.2px */
+.accent-subtract-right {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 149px;
+  height: 208px;
+  border-radius: 80px 0 0 80px;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+/* Figma Rectangle 127: 250.5px x 252.7px, Radius 200px (Sits behind "CH") */
+.accent-circle-bottom-left {
+  position: absolute;
+  bottom: -45px;
+  left: -85px;
+  width: 250px;
+  height: 253px;
+  border-radius: 200px;
+  background: rgba(0, 0, 0, 0.20);
+  pointer-events: none;
+}
+
+/* Figma Rectangle 132: 375.1px x 387.7px (Sits behind "OS") */
+.accent-shape-bottom-right {
+  position: absolute;
+  bottom: -190px;
+  right: -150px;
+  width: 375px;
+  height: 388px;
+  border-radius: 120px;
+  transform: rotate(-2.55deg);
+  background: rgba(0, 0, 0, 0.20);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   THE NEXT TEEN STARS BADGE (Navbar Star replica scaled to Footer Size)
+   ========================================================================== */
+.teen-stars-badge {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  width: 158.2px;
+  height: 158.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.footer-star-badge {
+  position: relative;
+  width: 158.2px;
+  height: 158.2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform var(--transition-fast, 0.15s), filter var(--transition-fast, 0.15s);
+  cursor: pointer;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.footer-star-badge:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.75));
+}
+
+.footer-star-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.22));
+}
+
+/* 3 Star Beams Infinite Rotation Animation (2.8s full rotation in the same direction at its point) */
+@keyframes rotateFooterStarBeams {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer-star-svg .star-beams-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotateFooterStarBeams 2.8s linear infinite;
+  will-change: transform;
+  transition: opacity var(--transition-fast, 0.15s);
+}
+
+.footer-star-badge:hover .footer-star-svg .star-beams-group {
+  opacity: 1;
+}
+
+.footer-star-svg .star-view-group {
+  transition: transform var(--transition-fast, 0.15s);
+}
+
+.footer-star-badge:hover .footer-star-svg .star-view-group {
+  transform: translate(0, 6.6px) scale(1.05);
+}
+
+/* ==========================================================================
+   INNER GLASSMORPHIC CARD (Figma Rectangle 145: Node 617:1968)
+   Width: 1040px, Height: ~526.8px, CornerRadius: 30px
+   Fill: rgba(0, 0, 0, 0.20), Stroke: 1.5px Gradient
+   ========================================================================== */
+.footer-glass-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.20);
+  border-radius: 30px;
+  padding: 56px 52px 34px;
+  box-sizing: border-box;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* Two-column layout */
+.card-columns-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 52px;
+}
+
+/* --------------------------------------------------------------------------
+   LEFT COLUMN: BRAND & MISSION
+   -------------------------------------------------------------------------- */
+.card-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo row matching Figma: Vector 360 (35x38) + Chresthos (36px) + FOUNDATION (12px) */
+.brand-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.brand-logo-mark {
+  width: 35px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-condensed), 'Sofia Sans Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 43.2px;
+  color: #ffffff;
+}
+
+.brand-foundation {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 6px;
+  color: #ffffff;
+}
+
+/* Mission statement (Figma Text 617:1973: Poppins 400, 15px, 22.5px LH) */
+.brand-mission-text {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #ffffff;
+  max-width: 447px;
+  margin: 0 0 32px 0;
+}
+
+/* Domain Link Row with Dashicons admin-site globe (Figma 617:2008 + 617:1974) */
+.brand-domain-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.domain-icon {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.brand-domain-link {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22.5px;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity var(--transition-fast, 0.15s);
+}
+
+.brand-domain-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN: GET IN TOUCH
+   -------------------------------------------------------------------------- */
+.card-contact-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Heading: 'GET IN TOUCH' (Figma Text 617:1975: Poppins 600, 15px) */
+.contact-heading {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-icon-wrapper {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #e7e7e7;
+  margin: 0;
+}
+
+.contact-address {
+  max-width: 371px;
+}
+
+.contact-link {
+  color: #e7e7e7;
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.15s);
+}
+
+.contact-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.contact-phones {
+  max-width: 373px;
+}
+
+/* Contact Pill Button (Figma Frame 99: 76px x 39px, Radius: 20px, Fill: #ffffff) */
+.contact-btn-wrapper {
+  margin-top: 8px;
+}
+
+.contact-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 39px;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary, #8a38f5);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-fast, 0.15s);
+}
+
+.contact-pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  background-color: #fafafa;
+}
+
+.contact-pill-btn span {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16.5px;
+  color: var(--color-primary, #8a38f5);
+}
+
+/* --------------------------------------------------------------------------
+   DIVIDER LINE (Figma Line 62: Node 617:1979)
+   Width: 950px, Gradient from transparent -> white -> transparent
+   -------------------------------------------------------------------------- */
+.card-divider-line {
+  width: 100%;
+  max-width: 950px;
+  height: 1px;
+  margin: 40px auto 24px;
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 1) 31%, 
+    rgba(255, 255, 255, 1) 67%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* --------------------------------------------------------------------------
+   COPYRIGHT ROW (Figma Frame 118 + Text 617:1982)
+   -------------------------------------------------------------------------- */
+.card-copyright-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.copyright-icon-wrapper {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.copyright-text {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ==========================================================================
+   GIANT WATERMARK (Width equivalent to 102% of page view width / 102vw)
+   Font: Sofia Sans Extra Condensed 900
+   Aspect ratio of "CHRESTHOS": ~3.6 -> font-size: calc(102vw / 3.6)
+   Gradient Fill: #FFFFFF (100% opacity) at top -> rgba(255,255,255,0) at bottom
+   ========================================================================== */
+.footer-watermark-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 102vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-watermark {
+  font-family: var(--font-extra-condensed), 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 900;
+  font-size: calc(102vw / 3.6);
+  line-height: 0.82;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  display: block;
+  transform: translateY(calc(102vw / 3.6 * 0.045));
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE VIEW (Matching Figma iPhone 16 & 17 Pro Max - 1: Node 617:2011)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .footer-canvas {
+    border-radius: 0;
+    padding: 70px 16px 80px;
+  }
+
+  /* Mobile Teen Stars Badge */
+  .teen-stars-badge {
+    top: 35px;
+    right: 10px;
+    width: 70.3px;
+    height: 70.3px;
+  }
+
+  .footer-star-badge {
+    width: 70.3px;
+    height: 70.3px;
+  }
+
+  /* Inner Glass Card Mobile (Figma Rectangle 156: 350px x 541px, Radius 30px) */
+  .footer-glass-card {
+    border-radius: 30px;
+    padding: 36px 20px 24px;
+    max-width: 350px;
+  }
+
+  .card-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Brand Logo & Titles */
+  .brand-logo-row {
+    margin-bottom: 16px;
+    gap: 10px;
+  }
+
+  .brand-logo-mark {
+    width: 20px;
+    height: 22px;
+  }
+
+  .brand-name {
+    font-size: 22.6px;
+    line-height: 27.1px;
+  }
+
+  .brand-foundation {
+    font-size: 7.5px;
+    line-height: 11.3px;
+    letter-spacing: 3.76px;
+  }
+
+  .brand-mission-text {
+    font-size: 10px;
+    line-height: 15px;
+    max-width: 280px;
+    margin: 0 0 20px 0;
+  }
+
+  .brand-domain-row {
+    gap: 8px;
+  }
+
+  .domain-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .brand-domain-link {
+    font-size: 9px;
+    line-height: 13.5px;
+  }
+
+  /* Contact Mobile (Figma Texts 617:2857 - 617:2867: Poppins 10px / 9px) */
+  .contact-heading {
+    font-size: 9px;
+    line-height: 13.5px;
+    margin-bottom: 14px;
+  }
+
+  .contact-list {
+    gap: 14px;
+  }
+
+  .contact-row {
+    gap: 8px;
+  }
+
+  .contact-icon-wrapper {
+    width: 12px;
+    height: 12px;
+    margin-top: 2px;
+  }
+
+  .contact-icon-wrapper svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .contact-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .contact-address {
+    max-width: 252px;
+  }
+
+  .contact-phones {
+    max-width: 250px;
+  }
+
+  /* Contact Pill Button on Mobile (Figma Frame 99: 43.2px x 22.2px, Radius: 11.4px) */
+  .contact-pill-btn {
+    width: 43.2px;
+    height: 22.2px;
+    border-radius: 11.4px;
+  }
+
+  .contact-pill-btn span {
+    font-size: 6.25px;
+    line-height: 9.4px;
+  }
+
+  /* Divider Line Mobile (Figma Line 63: 250px) */
+  .card-divider-line {
+    max-width: 250px;
+    margin: 24px auto 14px;
+  }
+
+  /* Copyright Mobile (Figma Frame 119 + Text: 10px) */
+  .copyright-icon-wrapper {
+    width: 11.4px;
+    height: 11.4px;
+  }
+
+  .copyright-icon-wrapper svg {
+    width: 11.4px;
+    height: 11.4px;
+  }
+
+  .copyright-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  /* Mobile Bottom Accents (Figma 617:2011 behind mobile "CH" and "OS") */
+  .accent-circle-bottom-left {
+    width: 71px;
+    height: 72px;
+    border-radius: 50px;
+    left: -23px;
+    bottom: 2px;
+  }
+
+  .accent-shape-bottom-right {
+    width: 106px;
+    height: 110px;
+    border-radius: 40px;
+    right: -27px;
+    bottom: -49px;
+  }
+
+  /* Mobile Watermark (Width equivalent to 102% of page view width / 102vw) */
+  .footer-watermark-wrapper {
+    bottom: 0px;
+    width: 102vw;
+  }
+
+  .footer-watermark {
+    font-size: calc(102vw / 3.82);
+    line-height: 0.82;
+    transform: translateY(calc(102vw / 3.82 * 0.08));
+  }
+}

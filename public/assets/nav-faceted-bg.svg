@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="40%" stop-color="#8A38F5" />
+      <stop offset="75%" stop-color="#6D28D9" />
+      <stop offset="100%" stop-color="#581C87" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="80" rx="40" fill="url(#navGrad)" />
+  <polygon points="0,80 140,15 250,80" fill="rgba(40, 5, 80, 0.28)" />
+  <polygon points="210,0 310,80 410,0" fill="rgba(35, 5, 75, 0.22)" />
+  <polygon points="390,80 510,10 630,80" fill="rgba(255, 255, 255, 0.08)" />
+  <polygon points="600,0 710,75 820,0" fill="rgba(40, 5, 80, 0.25)" />
+  <polygon points="800,80 920,12 1040,80" fill="rgba(255, 255, 255, 0.1)" />
+  <polygon points="1010,0 1110,80 1200,0" fill="rgba(35, 5, 75, 0.32)" />
+</svg>

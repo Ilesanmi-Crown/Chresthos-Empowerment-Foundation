@@ -1,0 +1,10 @@
+.teen-star-page {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+  color: #080808;
+}
+
+.teen-star-page main {
+  display: block;
+}

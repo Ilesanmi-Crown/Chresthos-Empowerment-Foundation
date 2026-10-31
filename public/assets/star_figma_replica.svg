@@ -1,0 +1,70 @@
+<svg width="200" height="200" viewBox="-40 -40 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background for test comparison -->
+    <rect id="bg" x="-40" y="-40" width="80" height="80" fill="#8A38F5" />
+
+    <!-- Ray Beam Gradient -->
+    <linearGradient id="starRayGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="33.7%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="68.4%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Star Border Gradient (Figma gradientHandlePositions from 32.5%, 16.5% to 78%, 92%) -->
+    <linearGradient id="starBorderGrad" x1="32.5%" y1="16.5%" x2="78%" y2="92%">
+      <stop offset="0%" stop-color="#8A38F5" stop-opacity="1" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="75%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#8A38F5" stop-opacity="1" />
+    </linearGradient>
+
+    <!-- View Button Border Gradient -->
+    <linearGradient id="viewBorderGrad" x1="13.3%" y1="-20.4%" x2="90.4%" y2="117.3%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8" />
+      <stop offset="34.7%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="75%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background for previewing against Figma purple -->
+  <rect x="-40" y="-40" width="80" height="80" fill="#8A38F5" />
+
+  <!-- 1. The 5 Radiant Beams (Rectangles 153 to 157 from Figma) -->
+  <g class="star-rays">
+    <!-- Rectangle 156: Primary Vertical Beam (rot: -96.11°, opacity: 0.55) -->
+    <rect x="-35.8" y="-3.15" width="71.6" height="6.3" rx="3.15" transform="rotate(-96.11)" fill="url(#starRayGrad)" opacity="0.55" />
+
+    <!-- Rectangle 157: Diagonal Ambient Beam (rot: -122.68°, opacity: 0.10) -->
+    <rect x="-35.6" y="-3.15" width="71.3" height="6.3" rx="3.15" transform="rotate(-122.68)" fill="url(#starRayGrad)" opacity="0.10" />
+
+    <!-- Rectangle 154: Diagonal Ambient Beam (rot: -51.19°, opacity: 0.10) -->
+    <rect x="-35.6" y="-3.15" width="71.3" height="6.3" rx="3.15" transform="rotate(-51.19)" fill="url(#starRayGrad)" opacity="0.10" />
+
+    <!-- Rectangle 153: Diagonal Beam (rot: -24.63°, opacity: 0.55) -->
+    <rect x="-35.6" y="-3.15" width="71.3" height="6.3" rx="3.15" transform="rotate(-24.63)" fill="url(#starRayGrad)" opacity="0.55" />
+
+    <!-- Rectangle 155: Diagonal Beam (rot: +19.16°, opacity: 0.55) -->
+    <rect x="-35.6" y="-3.15" width="71.3" height="6.3" rx="3.15" transform="rotate(19.16)" fill="url(#starRayGrad)" opacity="0.55" />
+  </g>
+
+  <!-- 2. Star 2 (5-pointed star with exact 1.258px corner radius and gradient stroke) -->
+  <path d="M -1.197 -17.286 A 1.258 1.258 0 0 1 1.197 -17.286 L 4.425 -7.349 A 1.258 1.258 0 0 0 5.622 -6.480 L 16.070 -6.480 A 1.258 1.258 0 0 1 16.810 -4.204 L 8.357 1.938 A 1.258 1.258 0 0 0 7.900 3.344 L 11.128 13.281 A 1.258 1.258 0 0 1 9.192 14.688 L 0.739 8.546 A 1.258 1.258 0 0 0 -0.739 8.546 L -9.192 14.688 A 1.258 1.258 0 0 1 -11.128 13.281 L -7.900 3.344 A 1.258 1.258 0 0 0 -8.357 1.938 L -16.810 -4.204 A 1.258 1.258 0 0 1 -16.070 -6.480 L -5.622 -6.480 A 1.258 1.258 0 0 0 -4.425 -7.349 Z"
+        fill="#FFFFFF"
+        stroke="url(#starBorderGrad)"
+        stroke-width="0.42" />
+
+  <!-- 3. Central Typography (Sofia Sans Condensed 800, #8A38F5) -->
+  <g font-family="'Sofia Sans Condensed', sans-serif" font-weight="800" font-size="4.2" fill="#8A38F5" text-anchor="middle" letter-spacing="0.05">
+    <text x="0" y="-1.8">THE</text>
+    <text x="0" y="1.5">NEXT TEEN</text>
+    <text x="0" y="4.8">STARS</text>
+  </g>
+
+  <!-- 4. View Button Pill (Frame 100: 11.9px x 4.9px, rx: 2.45px) -->
+  <g transform="translate(0, 6.6)">
+    <rect x="-5.95" y="0" width="11.9" height="4.9" rx="2.45" fill="#8A38F5" stroke="url(#viewBorderGrad)" stroke-width="0.15" />
+    <text x="0" y="3.25" font-family="'Poppins', sans-serif" font-weight="600" font-size="1.8" fill="#FFFFFF" text-anchor="middle">View</text>
+  </g>
+</svg>

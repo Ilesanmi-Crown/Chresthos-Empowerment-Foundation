@@ -1,0 +1,419 @@
+/* Navbar styling strictly adhering to Figma Frame 92 (Desktop: 649:62) and Frame 92 (Mobile: 649:944) */
+
+.navbar-header {
+  position: fixed;
+  top: 21px; /* Figma desktop Y offset: 21px */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px; /* Figma desktop X offset: (1440 - 1380)/2 = 30px */
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, top 0.3s ease;
+  will-change: transform, opacity;
+  pointer-events: none; /* Let space behind navbar be clickable into hero section */
+}
+
+.navbar-header.scrolled {
+  top: 12px;
+}
+
+/* Visibility states: only visible at top or when scrolling up to top */
+.navbar-header.nav-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-header.nav-hidden {
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+/* ==========================================================================
+   Main Navbar Container Frame (Desktop: 1380.0px x 57.6px, Radius: 32px)
+   ========================================================================== */
+.navbar-container {
+  width: 100%;
+  max-width: 1380px; /* Figma: 1380.0px */
+  height: 57.6px; /* Reduced by 20% from 72px */
+  border-radius: 32px; /* Scaled pill radius */
+  background-color: #8a38f5; /* Figma brand purple */
+  background-image: url('/assets/nav-faceted-bg.svg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px 0 24px;
+  box-shadow: 0 14px 34px rgba(138, 56, 245, 0.32);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   Brand Logo Group (Vector 360 + Typography)
+   ========================================================================== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Authentic Figma Vector 360 Logo Mark (30.4px x 30.4px Desktop, reduced 20%) */
+.brand-logo-mark {
+  width: 30.4px;
+  height: 30.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-vector-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Brand Title: "Chresthos" */
+.brand-title {
+  font-family: var(--font-extra-condensed);
+  font-weight: 900; /* Figma: Black */
+  font-size: 19.2px; /* Reduced by 20% from 24px */
+  line-height: 23px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: block;
+}
+
+/* Brand Subtitle: "FOUNDATION" */
+.brand-subtitle {
+  font-family: var(--font-poppins);
+  font-weight: 600; /* Figma: SemiBold */
+  font-size: 6.5px; /* Reduced by 20% from 8px */
+  line-height: 9.6px;
+  letter-spacing: 2.6px; /* Uppercase tracking */
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 1px;
+  display: block;
+}
+
+/* ==========================================================================
+   Desktop Navigation Links Group (Poppins 500, 12px / 18px)
+   ========================================================================== */
+.navbar-desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-poppins);
+  font-weight: 500; /* Figma: Medium */
+  font-size: 12px; /* Figma: 12.0px */
+  line-height: 18px; /* Figma: 18.0px */
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* Downward Caret Chevron Vector (10px x 6px) */
+.nav-chevron {
+  width: 10px;
+  height: 6px;
+  opacity: 0.9;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.nav-link:hover .nav-chevron {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Right Action Section: Star Badge + Donate Button + Hamburger
+   ========================================================================== */
+.navbar-right-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   The Next Teen Stars Shining Star Badge (Figma Replica)
+   Exact replica of Star 2, Beams 153-157, Frame 100
+   -------------------------------------------------------------------------- */
+.nav-star-badge {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+  flex-shrink: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.nav-star-badge:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.65));
+}
+
+.nav-star-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: block;
+}
+
+/* 3 Star Beams Infinite Rotation Animation (2.8s full rotation in the same direction at its point) */
+@keyframes rotateStarBeams {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-star-svg .star-beams-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rotateStarBeams 2.8s linear infinite;
+  will-change: transform;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-star-badge:hover .nav-star-svg .star-beams-group {
+  opacity: 1;
+}
+
+.nav-star-svg .star-body-path {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+}
+
+/* --------------------------------------------------------------------------
+   Donate Outline Button (Reduced 20% to fit 57.6px navbar)
+   -------------------------------------------------------------------------- */
+.navbar-donate-outline-btn {
+  width: 102px;
+  height: 36.8px; /* Reduced by 20% from 46px */
+  border-radius: 32px;
+  border: 1.5px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.navbar-donate-outline-btn:hover {
+  background: #ffffff;
+  color: #8a38f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Hamburger Button (charm:menu-hamburger — 24px x 24px)
+   -------------------------------------------------------------------------- */
+.mobile-hamburger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Drawer (Hidden on Desktop) */
+.mobile-nav-drawer {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   Strictly adheres to Figma Frame 92 Mobile (Node ID: 649:944 - 428px x 60px)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .navbar-header {
+    top: 16px; /* Figma mobile Y offset reference */
+    padding: 0 6px; /* Figma mobile: 6px margin each side (440 - 428)/2 = 6px */
+  }
+
+  .navbar-container {
+    width: 100%;
+    max-width: 428px; /* Figma: 428.0px */
+    height: 38.4px; /* Reduced by 20% from 48px */
+    border-radius: 21.33px; /* Scaled pill radius */
+    padding: 0 12px;
+    box-shadow: 0 8px 24px rgba(138, 56, 245, 0.28);
+  }
+
+  /* Desktop links hidden on mobile */
+  .navbar-desktop-links {
+    display: none;
+  }
+
+  /* Mobile Brand Logo Mark: 16px x 16px (reduced 20%) */
+  .brand-logo-mark {
+    width: 16px;
+    height: 16px;
+  }
+
+  .navbar-brand {
+    gap: 6px;
+  }
+
+  /* Mobile Brand Title: 12.0px / 14.4px */
+  .brand-title {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+
+  /* Mobile Brand Subtitle: 4px / 6px */
+  .brand-subtitle {
+    font-size: 4px;
+    line-height: 6px;
+    letter-spacing: 1.6px;
+    margin-top: 0px;
+  }
+
+  .navbar-right-group {
+    gap: 7px;
+  }
+
+  /* Mobile Compact Star Badge (scaled to fit mobile navbar pill) */
+  .nav-star-badge {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Mobile Donate Outline Button (Reduced 20%) */
+  .navbar-donate-outline-btn {
+    width: 44px;
+    height: 16.8px;
+    border-radius: 14px;
+    border: 1px solid #ffffff;
+    font-size: 5.5px;
+    line-height: 8px;
+    padding: 0;
+  }
+
+  /* Mobile Hamburger Icon (18px x 18px) */
+  .mobile-hamburger-btn {
+    display: flex;
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Mobile Navigation Drawer Overlay */
+  .mobile-nav-drawer {
+    display: block;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .mobile-nav-drawer.open {
+    pointer-events: auto;
+  }
+
+  .mobile-nav-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+  }
+
+  .mobile-nav-drawer.open .mobile-nav-backdrop {
+    opacity: 1;
+  }
+
+  .mobile-nav-sheet {
+    position: absolute;
+    top: 60px;
+    left: 16px;
+    right: 16px;
+    background: #ffffff;
+    border-radius: var(--radius-card);
+    padding: 24px;
+    box-shadow: var(--shadow-float);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all var(--transition-normal);
+  }
+
+  .mobile-nav-drawer.open .mobile-nav-sheet {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-nav-link {
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .mobile-drawer-donate-btn {
+    background: #8a38f5;
+    color: #ffffff;
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: var(--radius-pill);
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+  }
+}

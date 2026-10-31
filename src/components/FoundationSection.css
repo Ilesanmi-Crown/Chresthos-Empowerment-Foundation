@@ -1,0 +1,230 @@
+.foundation-section {
+  position: relative;
+  width: 100%;
+  margin: 60px auto 120px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Background Purple Dot-Matrix World Map (Centered in the middle of What Do We Do and Outreaches)
+   ========================================================================== */
+.foundation-mid-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.foundation-mid-map-wrapper .foundation-map-item {
+  position: absolute;
+  left: 50%;
+  top: 40px; /* Exact middle of the 80px space between What Do We Do and Outreaches */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.foundation-mid-map-wrapper .foundation-map-item .map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Map 2 Properties (Desktop: 2391px x 765px, 20% opacity) */
+.foundation-mid-map-wrapper .foundation-map-item.map-item-2 {
+  width: 2391px;
+  height: 765px;
+  opacity: 0.20;
+}
+
+/* Overview block (What Do We Do) */
+.foundation-overview-block {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foundation-block-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foundation-mission-text {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.65;
+  color: var(--color-black);
+  margin-top: 24px;
+}
+
+/* Outreaches block */
+.foundation-outreaches-block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px 60px;
+  scroll-margin-top: 80px;
+}
+
+.outreaches-title {
+  margin-bottom: 0;
+}
+
+.outreaches-mission-text {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.outreaches-highlight-statement {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: clamp(20px, 2.6vw, 36px);
+  line-height: 1.35;
+  color: var(--color-primary);
+  max-width: 880px;
+  margin-bottom: 48px;
+}
+
+/* Outreaches media grid */
+.outreaches-media-grid {
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.outreach-card {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  background: #000000;
+}
+
+.outreach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(138, 56, 245, 0.25);
+}
+
+.outreach-image-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.outreach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.outreach-card:hover .outreach-image {
+  transform: scale(1.06);
+}
+
+.outreach-image-container.image-fallback {
+  background: linear-gradient(135deg, #8a38f5 0%, #1e1e24 100%);
+}
+
+.outreach-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.outreach-card-title {
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.outreach-card-desc {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 900px) {
+  .foundation-section {
+    margin: 40px auto 60px;
+  }
+
+  .foundation-overview-block {
+    margin-bottom: 48px;
+    padding: 20px 16px;
+  }
+
+  .foundation-outreaches-block {
+    padding: 20px 16px 40px;
+  }
+
+  /* Mobile Map 2: Exact middle of the 48px space between What Do We Do and Outreaches */
+  .foundation-mid-map-wrapper .foundation-map-item.map-item-2 {
+    top: 104px;
+    width: 1500px;
+    height: 1000px;
+    opacity: 0.20;
+    transform: translate(-50%, -50%);
+  }
+
+  .foundation-mission-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 16px;
+  }
+
+  .outreaches-mission-text {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .outreaches-highlight-statement {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .outreaches-media-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 20px;
+  }
+
+  .outreach-image-container {
+    height: 200px;
+  }
+}

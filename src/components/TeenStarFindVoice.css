@@ -1,0 +1,51 @@
+.teen-star-find-voice {
+  width: min(650px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 72px 0 96px;
+  text-align: center;
+}
+
+.teen-star-find-voice-eyebrow {
+  margin-bottom: 8px;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.teen-star-find-voice h2 {
+  margin-bottom: 12px;
+  color: #111111;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.teen-star-find-voice-summary {
+  max-width: 570px;
+  margin: 0 auto;
+  color: #454545;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (max-width: 700px) {
+  .teen-star-find-voice {
+    width: calc(100% - 48px);
+    padding: 54px 0 60px;
+  }
+
+  .teen-star-find-voice-eyebrow {
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+
+  .teen-star-find-voice h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .teen-star-find-voice-summary {
+    font-size: 10px;
+    line-height: 1.65;
+  }
+}

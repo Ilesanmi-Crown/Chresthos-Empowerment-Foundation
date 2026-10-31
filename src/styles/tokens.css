@@ -1,0 +1,63 @@
+/* Design Tokens extracted directly from Figma file Untitled chresthos dev (key: cjoXta1tiQZ6TSQgiD6jfR) */
+:root {
+  /* Brand Colors */
+  --color-primary: #8a38f5;
+  --color-primary-hover: #7827e3;
+  --color-primary-light: #f3ebff;
+  --color-primary-glow: rgba(138, 56, 245, 0.25);
+  
+  --color-black: #000000;
+  --color-dark: #111111;
+  --color-white: #ffffff;
+  --color-text-dark: #000000;
+  --color-text-body: #232738;
+  --color-text-muted: #5c6077;
+  --color-text-quote: #18214d;
+  
+  --color-border-light: rgba(0, 0, 0, 0.08);
+  --color-border-card: rgba(138, 56, 245, 0.15);
+  --color-card-bg: #8a38f5;
+  --color-card-dark: #121216;
+
+  /* Typography Families */
+  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-condensed: 'Sofia Sans Condensed', sans-serif;
+  --font-extra-condensed: 'Sofia Sans Extra Condensed', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  /* Reference Dimensions (Figma Source of Truth) */
+  --figma-desktop-w: 1440px;
+  --figma-desktop-h: 9352px;
+  --figma-mobile-w: 440px;
+  --figma-mobile-h: 8373px;
+  --container-max-w: 1380px;
+
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-card: 24px;
+  --radius-pill: 50px;
+  --radius-mobile-pill: 22px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 16px 36px rgba(138, 56, 245, 0.14);
+  --shadow-float: 0 20px 40px rgba(0, 0, 0, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.25s ease-in-out;
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}

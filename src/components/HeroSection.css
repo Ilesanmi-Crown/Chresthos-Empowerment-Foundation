@@ -1,0 +1,344 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 176px 24px 80px; /* Distance to hero title: 176px + 16px = 192px (120px + 120px - 20%) */
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Background Purple Dot-Matrix World Maps (Figma Nodes 649:16, 649:15, 649:14)
+   ========================================================================== */
+.hero-bg-maps-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-map-item {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.hero-map-item .map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Map 3 (Desktop Node 649:16: 1858px x 594px, top: -400px, 20% opacity) */
+.map-item-3 {
+  top: -400px;
+  width: 1858px;
+  height: 594px;
+  opacity: 0.20;
+}
+
+/* Map 2 (Desktop Node 649:15: 2391px x 765px, height reduced 20%, top: 80px on webview, 20% opacity) */
+.map-item-2 {
+  top: 80px;
+  width: 2391px;
+  height: 765px;
+  opacity: 0.20;
+}
+
+/* Content Wrapper */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Headline matching Figma */
+.hero-title {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: clamp(23.8px, 4.06vw, 58.2px);
+  line-height: 1.25;
+  color: #000000;
+  margin: 16px 0 20px; /* 20px margin bottom on webview */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: -0.5px;
+}
+
+.hero-title-line-1 {
+  display: block;
+}
+
+.hero-title-line-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Solid Purple Badge around "One Child" matching Figma Rectangle 14 */
+.hero-purple-badge {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 11px;
+  /* border-radius: 8px; */
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.hero-after-badge {
+  color: #000000;
+}
+
+/* CTA Buttons matching Figma (reduced 30%) */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 39px;
+}
+
+.hero-btn-get-involved {
+  min-width: 175px;
+  height: 53.2px;
+  padding: 0 24px;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-poppins);
+  font-size: 16.8px;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 7px 17px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.hero-btn-get-involved svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hero-btn-get-involved:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.hero-btn-donate-outline {
+  min-width: 136.5px;
+  height: 53.2px;
+  padding: 0 20px;
+  background: transparent;
+  color: #000000;
+  font-family: var(--font-poppins);
+  font-size: 16.8px;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  border: 2px solid #000000;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all var(--transition-fast);
+}
+
+.hero-btn-donate-outline svg {
+  width: 13px;
+  height: 13px;
+}
+
+.hero-btn-donate-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Floating Children Cards Stage */
+.hero-cards-stage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px; /* Exactly 16px margin top for the 3 images */
+}
+
+.hero-cards-cluster {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 336px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-photo-card {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.child-photo-card .card-inner {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.child-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Center Behind Card (Young man in green beanie): shrinks/scales down on scroll */
+.card-center-behind {
+  width: 259px;
+  height: 322px;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%) scale(calc(1 - var(--hero-scroll, 0) * 0.1));
+  z-index: 1;
+}
+
+/* Left Front Card (B&W Smiling Boy): slides outward to the left on scroll */
+.card-left-front {
+  width: 273px;
+  height: 329px;
+  left: 10%;
+  top: 0;
+  transform: translate(calc(var(--hero-scroll, 0) * -100px), calc(var(--hero-scroll, 0) * 20px)) rotate(calc(-8deg - var(--hero-scroll, 0) * 4deg));
+  z-index: 2;
+}
+
+/* Right Front Card (Child with arms raised): slides outward to the right on scroll */
+.card-right-front {
+  width: 273px;
+  height: 329px;
+  right: 10%;
+  top: 0;
+  transform: translate(calc(var(--hero-scroll, 0) * 100px), calc(var(--hero-scroll, 0) * 20px)) rotate(calc(8deg + var(--hero-scroll, 0) * 4deg));
+  z-index: 2;
+}
+
+/* Mobile Responsiveness (matching Figma iPhone Frame 649:941) */
+@media (max-width: 900px) {
+  .hero-section {
+    min-height: auto;
+    padding: 80px 16px 48px; /* Space behind mobile fixed navbar */
+  }
+
+  /* Mobile Dot-Matrix Maps (height reduced 20% to 374px) */
+  .map-item-3 {
+    top: -220px;
+    width: 1271px;
+    height: 374px;
+    opacity: 0.20;
+  }
+
+  .map-item-2 {
+    top: 100px;
+    width: 1271px;
+    height: 574px;
+    opacity: 0.20;
+  }
+
+  .hero-title {
+    font-size: 25.6px;
+    line-height: 1.35;
+    margin: 110px 0 30px; /* 15px margin bottom on mobile */
+  }
+
+  .hero-title-line-2 {
+    gap: 6px;
+  }
+
+  .hero-purple-badge {
+    padding: 0 7px;
+    /* border-radius: 6px; */
+  }
+
+  .hero-cta-group {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .hero-btn-get-involved {
+    min-width: 114px;
+    height: 36px;
+    font-size: 11px;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-btn-get-involved svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-btn-donate-outline {
+    min-width: 88px;
+    height: 36px;
+    font-size: 11px;
+    border-width: 1px;
+    gap: 6px;
+  }
+
+  .hero-btn-donate-outline svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-cards-cluster {
+    height: 200px; /* Reduced by 15% from 220px */
+    max-width: 316px; /* Reduced by 15% from 360px */
+    margin-top: 140px;
+    margin-bottom: 30px;
+  }
+
+  .card-center-behind {
+    width: 136px; /* Reduced by 15% from 160px */
+    height: 170px; /* Reduced by 15% from 200px */
+    top: 7px;
+    transform: translateX(-50%) scale(calc(1 - var(--hero-scroll, 0) * 0.1));
+  }
+
+  .card-left-front {
+    width: 135.5px; /* Reduced by 15% from 170px */
+    height: 170.5px; /* Reduced by 15% from 210px */
+    left: 4%;
+    transform: translate(calc(var(--hero-scroll, 0) * -35px), calc(var(--hero-scroll, 0) * 10px)) rotate(calc(-7deg - var(--hero-scroll, 0) * 3deg)) scale(calc(1 - var(--hero-scroll, 0) * 0.15));
+  }
+
+  .card-right-front {
+    width: 135.5px; /* Reduced by 15% from 170px */
+    height: 170.5px; /* Reduced by 15% from 210px */
+    right: 4%;
+    transform: translate(calc(var(--hero-scroll, 0) * 35px), calc(var(--hero-scroll, 0) * 10px)) rotate(calc(7deg + var(--hero-scroll, 0) * 3deg)) scale(calc(1 - var(--hero-scroll, 0) * 0.15));
+  }
+}

@@ -1,0 +1,182 @@
+.teen-star-benefits {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 72px 32px 104px;
+  background: #ffffff;
+}
+
+.teen-star-benefits-map {
+  position: absolute;
+  z-index: -1;
+  top: 100px;
+  left: 50%;
+  width: min(1800px, 140vw);
+  transform: translateX(-50%);
+  opacity: 0.18;
+  pointer-events: none;
+  user-select: none;
+}
+
+.teen-star-benefits-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.teen-star-benefits-content {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.teen-star-benefits-header {
+  max-width: 640px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.teen-star-benefits-header h2 {
+  margin-bottom: 12px;
+  color: #080808;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.teen-star-benefits-header p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #111111;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.teen-star-benefits-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 60px;
+}
+
+.teen-star-benefits-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  max-height: 520px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.teen-star-benefits-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.teen-star-benefit {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-content: center;
+  align-items: start;
+  gap: 20px;
+  min-height: 112px;
+  padding: 20px 22px;
+  border-radius: 8px;
+  background: #eeeeee;
+}
+
+.teen-star-benefit-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.teen-star-benefit h3 {
+  margin: 1px 0 10px;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.teen-star-benefit p {
+  max-width: 320px;
+  color: #111111;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .teen-star-benefits {
+    padding: 52px 24px 72px;
+  }
+
+  .teen-star-benefits-map {
+    top: 180px;
+    width: 900px;
+    max-width: none;
+  }
+
+  .teen-star-benefits-header {
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+
+  .teen-star-benefits-header h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .teen-star-benefits-header p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .teen-star-benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .teen-star-benefits-photo {
+    width: min(100%, 300px);
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 0.68;
+    justify-self: center;
+    object-position: center 35%;
+  }
+
+  .teen-star-benefits-list {
+    grid-template-rows: none;
+    gap: 12px;
+  }
+
+  .teen-star-benefit {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 16px;
+    min-height: 92px;
+    padding: 16px;
+  }
+
+  .teen-star-benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .teen-star-benefit h3 {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .teen-star-benefit p {
+    font-size: 11px;
+  }
+}

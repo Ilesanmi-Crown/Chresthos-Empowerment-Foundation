@@ -1,0 +1,426 @@
+/* ==========================================================================
+   Mrs. Grace Evaly Dedicated Profile Page Styles
+   Replicating Figma Node 617:1112 (Desktop) & 617:2011 (Mobile)
+   ========================================================================== */
+
+.person-evaly-page-wrapper {
+  background-color: #ffffff;
+  color: #111827;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Main Profile Canvas */
+.person-profile-main {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 120px;
+  min-height: calc(100vh - 400px);
+}
+
+/* ==========================================================================
+   Figma Replica Background Dot-Matrix World Maps
+   - Map 1: Node 617:1113 (1550x620, opacity 0.5, top-right)
+   - Map 2: Node 617:1114 (2989x1195, opacity 0.2, wide spread)
+   ========================================================================== */
+
+.profile-bg-map {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.map-replica-1 {
+  top: -530px;
+  right: 00px;
+  width: 1800px;
+  max-width: 140vw;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.map-replica-2 {
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1800px;
+  max-width: 140vw;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.profile-bg-map .map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content Container */
+.person-profile-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Breadcrumbs Back Link */
+.profile-breadcrumbs {
+  margin-bottom: 28px;
+}
+
+.breadcrumb-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background-color: rgba(243, 244, 246, 0.85);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.breadcrumb-back-link:hover {
+  color: #8A38F5;
+  background-color: #f3e8ff;
+  transform: translateX(-3px);
+}
+
+/* Mobile-Only Header */
+.profile-header-mobile {
+  display: none;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Two-Column Grid */
+.person-profile-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Left Column: Profile Card Frame
+   ========================================================================== */
+
+.profile-card-column {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card-outer {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* Inner Rounded Purple Card */
+.profile-card-inner {
+  position: relative;
+  background: radial-gradient(circle at 50% 36%, #9c4df8 0%, #8c39f5 45%, #7d26ee 80%, #7219e5 100%);
+  border-radius: 15px;
+  box-shadow: 0 16px 36px rgba(138, 56, 245, 0.24), 0 4px 12px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 340 / 465;
+  min-height: 465px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 20px 0;
+}
+
+/* Concentric Vector Rings */
+.profile-card-rings-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.concentric-rings-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Portrait Cutout */
+.profile-portrait-wrap {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 325px;
+  height: 84%;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+
+/* Black Placard Banner */
+.profile-black-placard {
+  position: relative;
+  z-index: 3;
+  background-color: #000000;
+  margin: 0 10px;
+  padding: 13px 14px 13px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.placard-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+  margin: 0 0 3px 0;
+  line-height: 1.2;
+}
+
+.placard-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #f3f4f6;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.personal-card-placard-underlay{
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  width: 300px;
+  height: 44px;
+  background: white;
+  z-index: 1;
+  pointer-events: none;
+
+}
+
+/* 5 Golden 3D Stars (Overlapping Bottom Edge) */
+.profile-stars-overlay {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 160px;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.28));
+}
+
+.five-gold-stars-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   Right Column: Profile Info & Bio
+   ========================================================================== */
+
+.profile-info-column {
+  max-width: 600px;
+}
+
+.profile-header-desktop {
+  margin-bottom: 26px;
+}
+
+.profile-name-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0b0b0b;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin: 0 0 6px 0;
+}
+
+.profile-role-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* ABOUT Section Tag */
+.profile-about-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #8A38F5;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 18px;
+}
+
+/* Bio Paragraphs */
+.profile-bio-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bio-paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+  margin: 0;
+  font-weight: 400;
+}
+
+.bio-paragraph + .bio-paragraph{
+  margin-top: 1rem;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .person-profile-main {
+    padding-top: 110px;
+    padding-bottom: 80px;
+  }
+
+  .person-profile-grid {
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+  }
+
+  .bio-paragraph + .bio-paragraph{
+  margin-top: 0.7 rem;
+  }
+
+  .profile-name-heading {
+    font-size: 34px;
+  }
+
+  .bio-paragraph {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 820px) {
+  .profile-header-desktop {
+    display: none;
+  }
+
+  .profile-header-mobile {
+    display: block;
+  }
+
+  .profile-header-mobile .profile-name-heading {
+    font-size: 32px;
+  }
+
+  .profile-header-mobile .profile-role-subheading {
+    font-size: 12px;
+  }
+
+  .person-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .profile-card-column {
+    margin-bottom: 12px;
+  }
+
+  .profile-card-outer {
+    max-width: 320px;
+  }
+
+  .profile-card-inner {
+    min-height: 420px;
+    aspect-ratio: 320 / 430;
+  }
+
+  .placard-name {
+    font-size: 18px;
+  }
+
+  .placard-role {
+    font-size: 8.5px;
+  }
+
+  .profile-stars-overlay {
+    width: 135px;
+    bottom: -14px;
+  }
+
+  .profile-info-column {
+    max-width: 100%;
+  }
+
+  .profile-about-label {
+    text-align: left;
+    margin-bottom: 14px;
+  }
+
+  .profile-bio-paragraphs {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .person-profile-container {
+    padding: 0 20px;
+  }
+
+  .profile-header-mobile .profile-name-heading {
+    font-size: 27px;
+  }
+
+  .profile-header-mobile .profile-role-subheading {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+  }
+
+  .profile-card-outer {
+    max-width: 290px;
+  }
+
+  .profile-card-inner {
+    min-height: 385px;
+    border-radius: 18px;
+  }
+
+  .profile-stars-overlay {
+    width: 125px;
+    bottom: -13px;
+  }
+
+  .bio-paragraph {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+}
