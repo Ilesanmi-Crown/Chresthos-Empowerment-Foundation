@@ -5,14 +5,12 @@ import { slugify } from '../utils/slugify';
 import { useViewport } from '../hooks/useViewport';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import GetInvolvedModal from '../components/GetInvolvedModal';
 import './PersonalProfile.css';
 
 export default function PersonProfile() {
   const { slug } = useParams();
   const viewport = useViewport();
   const [showDonateNotice, setShowDonateNotice] = useState(false);
-  const [showGetInvolvedModal, setShowGetInvolvedModal] = useState(false);
 
   const person = [...PARTNERS, ...TEAM_MEMBERS].find(
     (p) => slugify(p.name) === slug
@@ -32,10 +30,6 @@ export default function PersonProfile() {
     setTimeout(() => setShowDonateNotice(false), 4000);
   };
 
-  const handleGetInvolved = () => {
-    setShowGetInvolvedModal(true);
-  };
-
   return (
     // ...your JSX stays the same
     <div className={`person-page-wrapper ${viewport.isMobile ? 'is-mobile' : 'is-desktop'}`}>
@@ -51,7 +45,7 @@ export default function PersonProfile() {
       )}
 
       {/* Shared Navbar matching Home page */}
-      <Navbar onDonateClick={handleDonate} onGetInvolvedClick={handleGetInvolved} />
+      <Navbar onDonateClick={handleDonate} />
 
       {/* Main Profile Canvas with Figma Replica Background Maps */}
       <main className="person-profile-main" id="main-content">
@@ -165,12 +159,6 @@ export default function PersonProfile() {
       {/* Shared Footer matching Home page */}
       <Footer />
 
-      {/* Get Involved Action Modal */}
-      <GetInvolvedModal 
-        isOpen={showGetInvolvedModal}
-        onClose={() => setShowGetInvolvedModal(false)}
-        onDonateClick={handleDonate}
-      />
     </div>
   );
 }

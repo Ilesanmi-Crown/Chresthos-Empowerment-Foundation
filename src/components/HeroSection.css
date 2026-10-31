@@ -6,13 +6,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 176px 24px 80px; /* Distance to hero title: 176px + 16px = 192px (120px + 120px - 20%) */
+  padding: 176px 24px 80px;
   overflow: hidden;
 }
 
-/* ==========================================================================
-   Background Purple Dot-Matrix World Maps (Figma Nodes 649:16, 649:15, 649:14)
-   ========================================================================== */
 .hero-bg-maps-wrapper {
   position: absolute;
   inset: 0;
@@ -34,23 +31,20 @@
   object-fit: contain;
 }
 
-/* Map 3 (Desktop Node 649:16: 1858px x 594px, top: -400px, 20% opacity) */
 .map-item-3 {
   top: -400px;
   width: 1858px;
   height: 594px;
-  opacity: 0.20;
+  opacity: 0.2;
 }
 
-/* Map 2 (Desktop Node 649:15: 2391px x 765px, height reduced 20%, top: 80px on webview, 20% opacity) */
 .map-item-2 {
   top: 80px;
   width: 2391px;
   height: 765px;
-  opacity: 0.20;
+  opacity: 0.2;
 }
 
-/* Content Wrapper */
 .hero-content-wrapper {
   position: relative;
   z-index: 1;
@@ -62,14 +56,13 @@
   text-align: center;
 }
 
-/* Headline matching Figma */
 .hero-title {
   font-family: var(--font-poppins);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(23.8px, 4.06vw, 58.2px);
   line-height: 1.25;
   color: #000000;
-  margin: 16px 0 20px; /* 20px margin bottom on webview */
+  margin: 16px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,13 +82,11 @@
   margin-top: 4px;
 }
 
-/* Solid Purple Badge around "One Child" matching Figma Rectangle 14 */
 .hero-purple-badge {
   background: var(--color-primary);
   color: #ffffff;
   font-weight: 600;
   padding: 0 11px;
-  /* border-radius: 8px; */
   display: inline-block;
   line-height: 1.2;
 }
@@ -104,7 +95,6 @@
   color: #000000;
 }
 
-/* CTA Buttons matching Figma (reduced 30%) */
 .hero-cta-group {
   display: flex;
   align-items: center;
@@ -173,13 +163,12 @@
   transform: translateY(-2px);
 }
 
-/* Floating Children Cards Stage */
 .hero-cards-stage {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16px; /* Exactly 16px margin top for the 3 images */
+  margin-top: 16px;
 }
 
 .hero-cards-cluster {
@@ -216,7 +205,6 @@
   display: block;
 }
 
-/* Center Behind Card (Young man in green beanie): shrinks/scales down on scroll */
 .card-center-behind {
   width: 259px;
   height: 322px;
@@ -226,7 +214,6 @@
   z-index: 1;
 }
 
-/* Left Front Card (B&W Smiling Boy): slides outward to the left on scroll */
 .card-left-front {
   width: 273px;
   height: 329px;
@@ -236,7 +223,6 @@
   z-index: 2;
 }
 
-/* Right Front Card (Child with arms raised): slides outward to the right on scroll */
 .card-right-front {
   width: 273px;
   height: 329px;
@@ -246,98 +232,98 @@
   z-index: 2;
 }
 
-/* Mobile Responsiveness (matching Figma iPhone Frame 649:941) */
 @media (max-width: 900px) {
   .hero-section {
     min-height: auto;
-    padding: 80px 16px 48px; /* Space behind mobile fixed navbar */
+    padding: clamp(68px, 18.2vw, 80px) clamp(12px, 4vw, 16px) clamp(40px, 11vw, 48px);
   }
 
-  /* Mobile Dot-Matrix Maps (height reduced 20% to 374px) */
   .map-item-3 {
-    top: -220px;
-    width: 1271px;
-    height: 374px;
-    opacity: 0.20;
+    top: clamp(-220px, -50vw, -160px);
+    width: min(290vw, 1271px);
+    height: clamp(300px, 85vw, 374px);
+    opacity: 0.2;
   }
 
   .map-item-2 {
-    top: 100px;
-    width: 1271px;
-    height: 574px;
-    opacity: 0.20;
+    top: clamp(72px, 22.7vw, 100px);
+    width: min(290vw, 1271px);
+    height: clamp(416px, 130.5vw, 574px);
+    opacity: 0.2;
   }
 
   .hero-title {
-    font-size: 25.6px;
+    font-size: clamp(24px, 6.82vw, 30px);
     line-height: 1.35;
-    margin: 110px 0 30px; /* 15px margin bottom on mobile */
+    margin: clamp(72px, 25vw, 110px) 0 clamp(20px, 6.8vw, 30px);
   }
 
   .hero-title-line-2 {
-    gap: 6px;
+    gap: clamp(4px, 1.4vw, 6px);
   }
 
   .hero-purple-badge {
-    padding: 0 7px;
-    /* border-radius: 6px; */
+    padding: 0 clamp(5px, 1.6vw, 7px);
   }
 
   .hero-cta-group {
-    gap: 8px;
-    margin-bottom: 25px;
+    gap: clamp(6px, 2vw, 8px);
+    margin-bottom: clamp(20px, 5.7vw, 25px);
   }
 
   .hero-btn-get-involved {
-    min-width: 114px;
-    height: 36px;
-    font-size: 11px;
-    gap: 6px;
+    min-width: clamp(104px, 28.5vw, 114px);
+    height: clamp(32px, 9vw, 36px);
+    padding-inline: clamp(12px, 5vw, 20px);
+    font-size: clamp(10px, 2.75vw, 11px);
+    gap: clamp(4px, 1.5vw, 6px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
-  .hero-btn-get-involved svg {
-    width: 12px;
-    height: 12px;
+  .hero-btn-get-involved svg,
+  .hero-btn-donate-outline svg {
+    width: clamp(10px, 3vw, 12px);
+    height: clamp(10px, 3vw, 12px);
   }
 
   .hero-btn-donate-outline {
-    min-width: 88px;
-    height: 36px;
-    font-size: 11px;
+    min-width: clamp(80px, 22vw, 88px);
+    height: clamp(32px, 9vw, 36px);
+    padding-inline: clamp(10px, 4.5vw, 18px);
+    font-size: clamp(10px, 2.75vw, 11px);
     border-width: 1px;
-    gap: 6px;
+    gap: clamp(4px, 1.5vw, 6px);
   }
 
-  .hero-btn-donate-outline svg {
-    width: 12px;
-    height: 12px;
+  .hero-cards-stage {
+    margin-top: clamp(8px, 4vw, 16px);
   }
 
   .hero-cards-cluster {
-    height: 200px; /* Reduced by 15% from 220px */
-    max-width: 316px; /* Reduced by 15% from 360px */
-    margin-top: 140px;
-    margin-bottom: 30px;
+    width: min(100%, 79vw);
+    height: clamp(170px, 50vw, 220px);
+    max-width: 316px;
+    margin-top: clamp(72px, 35vw, 140px);
+    margin-bottom: clamp(20px, 7.5vw, 30px);
   }
 
   .card-center-behind {
-    width: 136px; /* Reduced by 15% from 160px */
-    height: 170px; /* Reduced by 15% from 200px */
-    top: 7px;
+    width: clamp(108px, 34vw, 136px);
+    height: clamp(136px, 42.5vw, 170px);
+    top: clamp(5px, 1.75vw, 7px);
     transform: translateX(-50%) scale(calc(1 - var(--hero-scroll, 0) * 0.1));
   }
 
   .card-left-front {
-    width: 135.5px; /* Reduced by 15% from 170px */
-    height: 170.5px; /* Reduced by 15% from 210px */
+    width: clamp(108px, 34vw, 135.5px);
+    height: clamp(136px, 42.6vw, 170.5px);
     left: 4%;
     transform: translate(calc(var(--hero-scroll, 0) * -35px), calc(var(--hero-scroll, 0) * 10px)) rotate(calc(-7deg - var(--hero-scroll, 0) * 3deg)) scale(calc(1 - var(--hero-scroll, 0) * 0.15));
   }
 
   .card-right-front {
-    width: 135.5px; /* Reduced by 15% from 170px */
-    height: 170.5px; /* Reduced by 15% from 210px */
+    width: clamp(108px, 34vw, 135.5px);
+    height: clamp(136px, 42.6vw, 170.5px);
     right: 4%;
     transform: translate(calc(var(--hero-scroll, 0) * 35px), calc(var(--hero-scroll, 0) * 10px)) rotate(calc(7deg + var(--hero-scroll, 0) * 3deg)) scale(calc(1 - var(--hero-scroll, 0) * 0.15));
   }

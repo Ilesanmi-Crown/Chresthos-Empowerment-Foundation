@@ -391,7 +391,7 @@
   .cards-grid-4x2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 380px;
-    gap: 12px;
+    gap: 20px;
   }
 
   .figma-partner-card {

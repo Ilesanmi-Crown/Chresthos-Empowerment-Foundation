@@ -3,7 +3,7 @@
    Replicating Figma Node 617:1112 (Desktop) & 617:2011 (Mobile)
    ========================================================================== */
 
-.person-evaly-page-wrapper {
+.person-page-wrapper {
   background-color: #ffffff;
   color: #111827;
   min-height: 100vh;
@@ -394,6 +394,13 @@
 @media (max-width: 480px) {
   .person-profile-container {
     padding: 0 20px;
+  }
+
+  .personal-card-placard-underlay {
+    left: 50%;
+    width: 84%;
+    height: 34px;
+    transform: translateX(-50%);
   }
 
   .profile-header-mobile .profile-name-heading {

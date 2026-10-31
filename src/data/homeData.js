@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
-  { label: 'Home', href: '.', hasDropdown: false },
-  { label: 'About us', href: '.#foundation', hasDropdown: false },
-  { label: 'Get involved', href: '.#outreaches', hasDropdown: false },
+  { label: 'Home', href: '/', hasDropdown: false },
+  { label: 'About us', href: '/#foundation', hasDropdown: false },
+  { label: 'Get involved', href: '/#outreaches', hasDropdown: false },
   { label: 'TNTS', href: '/the-next-teen-star', hasDropdown: false },
 ];
 

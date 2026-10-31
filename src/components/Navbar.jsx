@@ -45,17 +45,35 @@ export default function Navbar({ onDonateClick, onGetInvolvedClick }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setMobileMenuOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [mobileMenuOpen]);
+
   const isNavbarVisible = visible || mobileMenuOpen;
 
   const toggleMenu = () => setMobileMenuOpen(prev => !prev);
   const closeMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className={`navbar-header ${scrolled ? 'scrolled' : ''} ${isNavbarVisible ? 'nav-visible' : 'nav-hidden'}`}>
+    <>
+      <header className={`navbar-header ${scrolled ? 'scrolled' : ''} ${isNavbarVisible ? 'nav-visible' : 'nav-hidden'}`}>
       {/* Main Navbar Pill Container matching Figma Frame 92 */}
       <nav className="navbar-container" aria-label="Main Navigation">
         {/* Brand Logo with exact Figma vector logo mark */}
-        <a href="." className="navbar-brand" onClick={closeMenu}>
+        <a href="/" className="navbar-brand" onClick={closeMenu}>
           <div className="brand-logo-mark">
             <img 
               src="/assets/figma-logo-white.svg" 
@@ -219,9 +237,18 @@ export default function Navbar({ onDonateClick, onGetInvolvedClick }) {
         </div>
       </nav>
 
+      </header>
+
       {/* Mobile Drawer Menu */}
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-nav-backdrop" onClick={closeMenu} />
+        <button
+          className="mobile-nav-backdrop"
+          type="button"
+          onClick={closeMenu}
+          aria-label="Close navigation menu"
+          aria-hidden={!mobileMenuOpen}
+          tabIndex={mobileMenuOpen ? 0 : -1}
+        />
         <div className="mobile-nav-sheet">
           <div className="mobile-nav-links">
             {NAV_LINKS.map((link) => (
@@ -253,6 +280,6 @@ export default function Navbar({ onDonateClick, onGetInvolvedClick }) {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

@@ -65,9 +65,9 @@
 }
 
 /* Authentic Figma Vector 360 Logo Mark (30.4px x 30.4px Desktop, reduced 20%) */
-.brand-logo-mark {
-  width: 30.4px;
-  height: 30.4px;
+.navbar-brand .brand-logo-mark {
+  width: 36.48px;
+  height: 36.48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,8 +90,8 @@
 .brand-title {
   font-family: var(--font-extra-condensed);
   font-weight: 900; /* Figma: Black */
-  font-size: 19.2px; /* Reduced by 20% from 24px */
-  line-height: 23px;
+  font-size: 23.04px;
+  line-height: 27.6px;
   letter-spacing: 0px;
   color: #ffffff;
   display: block;
@@ -101,9 +101,9 @@
 .brand-subtitle {
   font-family: var(--font-poppins);
   font-weight: 600; /* Figma: SemiBold */
-  font-size: 6.5px; /* Reduced by 20% from 8px */
-  line-height: 9.6px;
-  letter-spacing: 2.6px; /* Uppercase tracking */
+  font-size: 7.8px;
+  line-height: 11.52px;
+  letter-spacing: 3.12px;
   color: #ffffff;
   text-transform: uppercase;
   margin-top: 1px;
@@ -167,8 +167,8 @@
    -------------------------------------------------------------------------- */
 .nav-star-badge {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -291,27 +291,27 @@
     display: none;
   }
 
-  /* Mobile Brand Logo Mark: 16px x 16px (reduced 20%) */
-  .brand-logo-mark {
-    width: 16px;
-    height: 16px;
+  /* Navbar logo mark scaled up by 20% for mobile */
+  .navbar-brand .brand-logo-mark {
+    width: 19.2px;
+    height: 19.2px;
   }
 
   .navbar-brand {
-    gap: 6px;
+    gap: 7.2px;
   }
 
-  /* Mobile Brand Title: 12.0px / 14.4px */
+  /* Mobile Brand Title scaled up by 20% */
   .brand-title {
-    font-size: 12px;
-    line-height: 14.4px;
+    font-size: 16.128px;
+    line-height: 19.3536px;
   }
 
-  /* Mobile Brand Subtitle: 4px / 6px */
+  /* Mobile Brand Subtitle scaled with the wordmark */
   .brand-subtitle {
-    font-size: 4px;
-    line-height: 6px;
-    letter-spacing: 1.6px;
+    font-size: 5.376px;
+    line-height: 8.064px;
+    letter-spacing: 2.1504px;
     margin-top: 0px;
   }
 
@@ -321,8 +321,8 @@
 
   /* Mobile Compact Star Badge (scaled to fit mobile navbar pill) */
   .nav-star-badge {
-    width: 28px;
-    height: 28px;
+    width: 40.32px;
+    height: 40.32px;
   }
 
   /* Mobile Donate Outline Button (Reduced 20%) */
@@ -359,8 +359,15 @@
   .mobile-nav-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: rgba(15, 10, 25, 0.55);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     opacity: 0;
+    cursor: default;
     transition: opacity var(--transition-normal);
   }
 
