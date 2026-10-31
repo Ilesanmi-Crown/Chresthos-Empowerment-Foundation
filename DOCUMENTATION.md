@@ -46,6 +46,7 @@ There is no test or lint script in `package.json`.
 |-- package.json                 Dependencies and npm scripts
 |-- package-lock.json            Locked dependency resolution
 |-- vite.config.js               Vite React plugin, dev port, and build output behavior
+|-- vercel.json                  Rewrites SPA route requests to the app shell
 |-- dist/                        Generated production build output
 |-- node_modules/                Installed dependencies
 |-- public/
@@ -199,6 +200,8 @@ Create local configuration from `.env.example` and supply the endpoint URL outsi
 
 `ScrollToTop` in `App.jsx` listens to both pathname and hash changes. If a matching hash ID exists, it scrolls that element to the top; otherwise it resets to page top. The profile breadcrumb links to `/#team`.
 
+`vercel.json` rewrites requests to `index.html`, allowing Vercel to serve the client-side app for direct route requests such as `/the-next-teen-star`.
+
 The Home page passes callbacks into `Navbar`, `HeroSection`, and `GetInvolvedModal`. The profile page passes its Donate notice callback to `Navbar`; its Home, About us, Get involved, and TNTS links use the root-absolute destinations in `NAV_LINKS`. The Donate page passes a self-navigation callback to `Navbar`. The Teen Star page currently renders `<Navbar />` without callbacks.
 
 ## 9. Accessibility and Behavior Notes
@@ -239,4 +242,4 @@ These items are directly supported by the current code. They are listed as findi
 
 - The production value and owner of `VITE_SHEET_URL`, the receiving service, accepted fields, and how success should be verified.
 - Whether the static account number `0000000000` on the Donate page should be replaced with production bank details.
-- The deployment host and release process for `dist`; neither is configured in the inspected source.
+- The deployment host is Vercel, as confirmed by the project owner. The release workflow and Vercel project settings are not defined in the repository. Needs confirmation.
