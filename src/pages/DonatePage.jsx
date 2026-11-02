@@ -26,7 +26,7 @@ export default function DonatePage() {
 
       <main className="donate-main" id="main-content">
         <div className="donate-map donate-map-1" aria-hidden="true">
-          <img src="/assets/world-map-dots.png" alt="" />
+          <img src="/assets/top-dotted-world-map.png" alt="" />
         </div>
         <div className="donate-map donate-map-2" aria-hidden="true">
           <img src="/assets/world-map-dots.png" alt="" />

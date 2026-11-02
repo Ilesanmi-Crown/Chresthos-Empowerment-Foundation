@@ -71,7 +71,7 @@ There is no test or lint script in `package.json`.
 
 `src/pages/` contains `HomePage`, `PersonalProfile`, `DonatePage`, and `TeenStarPage`, with corresponding page CSS files.
 
-Vite is configured with `build.emptyOutDir: false`. Builds write to `dist` but do not clear that directory first.
+Vite is configured with `build.emptyOutDir: true`, so builds clear the existing `dist` contents before writing fresh output.
 
 ## 3. Components
 
@@ -234,9 +234,6 @@ These items are directly supported by the current code. They are listed as findi
 3. The Foundation map wrapper is styled but has no corresponding markup in `FoundationSection.jsx`; those map declarations currently have no effect. See [FoundationSection.css, line 15](src/components/FoundationSection.css#L15) and [FoundationSection.jsx](src/components/FoundationSection.jsx).
 4. `TestimonialsSection` has one testimonial record, state and handlers for changing slides, but its arrow controls are commented out. The displayed slide cannot currently be changed through the UI. See [TestimonialsSection.jsx, line 6](src/components/TestimonialsSection.jsx#L6), [TestimonialsSection.jsx, line 9](src/components/TestimonialsSection.jsx#L9), and [TestimonialsSection.jsx, line 97](src/components/TestimonialsSection.jsx#L97).
 5. The Contact form marks any resolved `no-cors` fetch as success without access to the response status or body, and does not validate the endpoint variable before sending. See [ContactModal.jsx, line 40](src/components/ContactModal.jsx#L40) and [ContactModal.jsx, line 43](src/components/ContactModal.jsx#L43).
-6. `TeenStarPage` does not pass `onDonateClick` to `Navbar`. The Donate button's click callback is therefore undefined on that page. See [TeenStarPage.jsx, line 14](src/pages/TeenStarPage.jsx#L14) and [Navbar.jsx, line 192](src/components/Navbar.jsx#L192).
-7. The profile-page Donate action shows a four-second test-mode notice rather than navigating to the Donate page or processing a payment. See [PersonalProfile.jsx, line 30](src/pages/PersonalProfile.jsx#L30) and [PersonalProfile.jsx, line 48](src/pages/PersonalProfile.jsx#L48).
-8. Vite is configured with `emptyOutDir: false`; old files in `dist` are not automatically removed by a build. See [vite.config.js, line 11](vite.config.js#L11).
 
 ### Needs confirmation
 

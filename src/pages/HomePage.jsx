@@ -20,7 +20,7 @@ export default function HomePage() {
 
   const handleSelectMember = (member) => {
     if (member && (member.id === 'partner-4' || member.name?.toLowerCase().includes('grace evaly'))) {
-      navigate('/grace-evaly');
+      navigate('/mrs-grace-evaly');
       return;
     }
     setSelectedMember(member);

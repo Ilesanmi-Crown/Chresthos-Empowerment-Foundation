@@ -37,10 +37,7 @@
   max-width: 1380px; /* Figma: 1380.0px */
   height: 57.6px; /* Reduced by 20% from 72px */
   border-radius: 32px; /* Scaled pill radius */
-  background-color: #8a38f5; /* Figma brand purple */
-  background-image: url('/assets/nav-faceted-bg.svg');
-  background-size: cover;
-  background-position: center;
+  background: #8a38f5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,6 +48,19 @@
   box-sizing: border-box;
   pointer-events: auto;
 }
+.navbar-facets-destop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.navbar-facets-mobile {
+  display: none;
+}
 
 /* ==========================================================================
    Brand Logo Group (Vector 360 + Typography)
@@ -58,6 +68,8 @@
 .navbar-brand {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
   gap: 10px;
   text-decoration: none;
   color: #ffffff;
@@ -66,8 +78,8 @@
 
 /* Authentic Figma Vector 360 Logo Mark (30.4px x 30.4px Desktop, reduced 20%) */
 .navbar-brand .brand-logo-mark {
-  width: 36.48px;
-  height: 36.48px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,8 +102,8 @@
 .brand-title {
   font-family: var(--font-extra-condensed);
   font-weight: 900; /* Figma: Black */
-  font-size: 23.04px;
-  line-height: 27.6px;
+  font-size: 27.648px;
+  line-height: 33.12px;
   letter-spacing: 0px;
   color: #ffffff;
   display: block;
@@ -101,9 +113,9 @@
 .brand-subtitle {
   font-family: var(--font-poppins);
   font-weight: 600; /* Figma: SemiBold */
-  font-size: 7.8px;
-  line-height: 11.52px;
-  letter-spacing: 3.12px;
+  font-size: 9.36px;
+  line-height: 13.824px;
+  letter-spacing: 3.744px;
   color: #ffffff;
   text-transform: uppercase;
   margin-top: 1px;
@@ -116,6 +128,8 @@
 .navbar-desktop-links {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
   gap: 32px;
 }
 
@@ -157,6 +171,8 @@
 .navbar-right-group {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
   gap: 20px;
   flex-shrink: 0;
 }
@@ -280,10 +296,25 @@
   .navbar-container {
     width: 100%;
     max-width: 428px; /* Figma: 428.0px */
-    height: 38.4px; /* Reduced by 20% from 48px */
-    border-radius: 21.33px; /* Scaled pill radius */
+    height: 55px;
+    border-radius: 30px;
     padding: 0 12px;
+    background-size: 100% 100%;
     box-shadow: 0 8px 24px rgba(138, 56, 245, 0.28);
+  }
+
+   .navbar-facets-destop{
+    display: none;
+  }
+.navbar-facets-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
   }
 
   /* Desktop links hidden on mobile */
@@ -293,25 +324,25 @@
 
   /* Navbar logo mark scaled up by 20% for mobile */
   .navbar-brand .brand-logo-mark {
-    width: 19.2px;
-    height: 19.2px;
+    width: 23.04px;
+    height: 23.04px;
   }
 
   .navbar-brand {
-    gap: 7.2px;
+    gap: 8.64px;
   }
 
   /* Mobile Brand Title scaled up by 20% */
   .brand-title {
-    font-size: 16.128px;
-    line-height: 19.3536px;
+    font-size: 19.3536px;
+    line-height: 23.2243px;
   }
 
   /* Mobile Brand Subtitle scaled with the wordmark */
   .brand-subtitle {
-    font-size: 5.376px;
-    line-height: 8.064px;
-    letter-spacing: 2.1504px;
+    font-size: 6.4512px;
+    line-height: 9.6768px;
+    letter-spacing: 2.5805px;
     margin-top: 0px;
   }
 
@@ -327,12 +358,12 @@
 
   /* Mobile Donate Outline Button (Reduced 20%) */
   .navbar-donate-outline-btn {
-    width: 44px;
-    height: 16.8px;
+    width: 52.8px;
+    height: 20.16px;
     border-radius: 14px;
     border: 1px solid #ffffff;
-    font-size: 5.5px;
-    line-height: 8px;
+    font-size: 6.6px;
+    line-height: 9.6px;
     padding: 0;
   }
 

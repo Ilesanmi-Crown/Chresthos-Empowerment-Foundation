@@ -11,7 +11,7 @@ export default function Footer() {
       {/* Outer Purple Canvas (Figma Rectangle 118: Node 617:1958, Radius: 70px) */}
       <div className="footer-canvas">
         {/* Background Dark Geometric Facet Shapes (Matching Figma subtract & rectangle layers) */}
-        <div className="footer-accents" aria-hidden="true">
+      <div className="footer-accents" aria-hidden="true">
           {/* Top-Right Circle Accent (Figma Rectangle 140: 202px x 204px, Radius 1000px) */}
           <div className="accent-circle-top-right" />
           

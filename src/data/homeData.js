@@ -53,15 +53,13 @@ export const HERO_CHILDREN = [
 export const OUTREACHES = [
   {
     id: 1,
-    title: 'Education & Learning Support',
-    description: 'Providing comprehensive school supplies, tuition support, and structured tutoring to keep children in classrooms.',
-    image: '/assets/outreach-media-1.png'
+
+    video: 'https://www.youtube.com/embed/tEz7_mxkXLo?si=OgNnSx-hfhuDLAjC'
   },
   {
     id: 2,
-    title: 'Community Mentorship & Relief',
-    description: 'Compassionate outreach providing essential food, healthcare assistance, and life skills mentorship.',
-    image: '/assets/outreach-media-2.png'
+
+    video: 'https://www.youtube.com/embed/g-40aZDF4WM?si=5H6fWa9gM4MntW7a'
   }
 ];
 

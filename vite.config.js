@@ -8,6 +8,6 @@ export default defineConfig({
     open: false
   },
   build: {
-    emptyOutDir: false
+    emptyOutDir: true
   }
 });

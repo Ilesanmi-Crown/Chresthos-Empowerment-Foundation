@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TeenStarHero from '../components/TeenStarHero';
@@ -9,9 +10,11 @@ import TeenStarCompetitionSteps from '../components/TeenStarCompetitionSteps';
 import './TeenStarPage.css';
 
 export default function TeenStarPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="teen-star-page">
-      <Navbar />
+      <Navbar onDonateClick={() => navigate('/donate')} />
       <main id="main-content">
         <TeenStarHero />
         <TeenStarFindVoice />

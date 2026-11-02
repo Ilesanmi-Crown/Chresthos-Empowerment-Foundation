@@ -34,11 +34,10 @@ a.figma-partner-card{
 }
 
 .testimonials-bg-map {
-  width: 2501px;
+  width: 100vw;
   max-width: none;
-  height: 1000px;
   object-fit: contain;
-  opacity: 0.10;
+  opacity: 0.50;
   pointer-events: none;
 }
 

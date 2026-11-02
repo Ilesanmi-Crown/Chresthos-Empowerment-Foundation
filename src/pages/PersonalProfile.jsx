@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { PARTNERS, TEAM_MEMBERS } from '../data/homeData';
 import { slugify } from '../utils/slugify';
 import { useViewport } from '../hooks/useViewport';
@@ -9,8 +9,8 @@ import './PersonalProfile.css';
 
 export default function PersonProfile() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const viewport = useViewport();
-  const [showDonateNotice, setShowDonateNotice] = useState(false);
 
   const person = [...PARTNERS, ...TEAM_MEMBERS].find(
     (p) => slugify(p.name) === slug
@@ -26,24 +26,12 @@ export default function PersonProfile() {
   }
 
   const handleDonate = () => {
-    setShowDonateNotice(true);
-    setTimeout(() => setShowDonateNotice(false), 4000);
+    navigate('/donate');
   };
 
   return (
     // ...your JSX stays the same
     <div className={`person-page-wrapper ${viewport.isMobile ? 'is-mobile' : 'is-desktop'}`}>
-      {/* Toast Notification for Donation */}
-      {showDonateNotice && (
-        <div className="toast-notification" role="status">
-          <i className="bx bxs-heart toast-icon"></i>
-          <div>
-            <strong>Thank you for your support!</strong>
-            <p>Donation gateway is currently in test mode.</p>
-          </div>
-        </div>
-      )}
-
       {/* Shared Navbar matching Home page */}
       <Navbar onDonateClick={handleDonate} />
 
@@ -52,7 +40,7 @@ export default function PersonProfile() {
         {/* Background Dot-Matrix World Map 1 (Figma Node 617:1113 / 1550x620) */}
         <div className="profile-bg-map map-replica-1" aria-hidden="true">
           <img 
-            src="/assets/world-map-dots.png" 
+            src="/assets/top-dotted-world-map.png" 
             alt="" 
             className="map-image map-1-img" 
             loading="eager"

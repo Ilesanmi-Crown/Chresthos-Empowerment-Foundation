@@ -34,21 +34,18 @@
 }
 
 .map-replica-1 {
-  top: -530px;
+  top: 0;
   right: 00px;
-  width: 1800px;
+  width: 75vw;
   max-width: 140vw;
-  opacity: 0.2;
   z-index: 0;
 }
 
 .map-replica-2 {
-  top: 160px;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1800px;
-  max-width: 140vw;
-  opacity: 0.18;
+  width: 100vw;
   z-index: 0;
 }
 

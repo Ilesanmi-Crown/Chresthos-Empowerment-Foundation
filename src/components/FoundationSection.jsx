@@ -35,15 +35,15 @@ export default function FoundationSection() {
             {OUTREACHES.map((item) => (
               <div key={item.id} className="outreach-card">
                 <div className="outreach-image-container">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="outreach-image"
-                    onError={(e) => {
-                      // Fallback to stylized block
-                      e.target.style.display = 'none';
-                      e.target.parentNode.classList.add('image-fallback');
-                    }}
+                  <iframe
+                    src={item.video}
+                    title={item.title}
+                    className="outreach-video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    loading="lazy"
                   />
                   <div className="outreach-overlay">
                     <h3 className="outreach-card-title">{item.title}</h3>

@@ -47,7 +47,7 @@ export default function HeroSection({ onGetInvolvedClick, onDonateClick }) {
         {/* Map 3: Upper canvas background (Node 649:16 desktop, 649:943 mobile) */}
         <div className="hero-map-item map-item-3">
           <img 
-            src="/assets/world-map-dots.png" 
+            src="/assets/top-dotted-world-map.png" 
             alt="" 
             className="map-img" 
           />

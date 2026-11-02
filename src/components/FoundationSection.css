@@ -26,8 +26,8 @@
 .foundation-mid-map-wrapper .foundation-map-item {
   position: absolute;
   left: 50%;
-  top: 40px; /* Exact middle of the 80px space between What Do We Do and Outreaches */
-  transform: translate(-50%, -50%);
+  top: 80px;
+  transform: translateX(-50%);
   pointer-events: none;
 }
 
@@ -39,9 +39,7 @@
 
 /* Map 2 Properties (Desktop: 2391px x 765px, 20% opacity) */
 .foundation-mid-map-wrapper .foundation-map-item.map-item-2 {
-  width: 2391px;
-  height: 765px;
-  opacity: 0.20;
+  width: 100vw;
 }
 
 /* Overview block (What Do We Do) */
@@ -136,15 +134,11 @@
   overflow: hidden;
 }
 
-.outreach-image {
+.outreach-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.outreach-card:hover .outreach-image {
-  transform: scale(1.06);
+  display: block;
+  border: 0;
 }
 
 .outreach-image-container.image-fallback {
@@ -195,11 +189,8 @@
 
   /* Mobile Map 2: Exact middle of the 48px space between What Do We Do and Outreaches */
   .foundation-mid-map-wrapper .foundation-map-item.map-item-2 {
-    top: 104px;
-    width: 1500px;
-    height: 1000px;
-    opacity: 0.20;
-    transform: translate(-50%, -50%);
+    top: 80px;
+    width: 100vw;
   }
 
   .foundation-mission-text {

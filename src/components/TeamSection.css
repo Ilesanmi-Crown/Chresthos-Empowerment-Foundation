@@ -352,7 +352,8 @@
   }
 
   .figma-partner-card {
-    width: 3000px;
+    width: 100%;
+    max-width: 316px;
   }
 
   .card-placard-underlay {

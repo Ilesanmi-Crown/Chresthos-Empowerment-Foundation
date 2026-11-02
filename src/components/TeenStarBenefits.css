@@ -9,11 +9,10 @@
 .teen-star-benefits-map {
   position: absolute;
   z-index: -1;
-  top: 100px;
+  top: 80px;
   left: 50%;
-  width: min(1800px, 140vw);
+  width: 100vw;
   transform: translateX(-50%);
-  opacity: 0.18;
   pointer-events: none;
   user-select: none;
 }
@@ -117,9 +116,8 @@
   }
 
   .teen-star-benefits-map {
-    top: 180px;
-    width: 900px;
-    max-width: none;
+    top: 80px;
+    width: 100vw;
   }
 
   .teen-star-benefits-header {
