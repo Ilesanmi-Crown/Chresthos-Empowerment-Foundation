@@ -1,0 +1,7 @@
+# Robots.txt for https://www.chresthosempowermentfoundation.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.chresthosempowermentfoundation.com/sitemap.xml
+

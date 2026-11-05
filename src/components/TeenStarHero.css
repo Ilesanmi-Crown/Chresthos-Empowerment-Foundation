@@ -21,15 +21,16 @@
   position: absolute;
   z-index: -1;
   right: 0;
-  bottom: 0;
+  bottom: -50px;
   left: 0;
   height: 150%;
   background-image: url('/assets/world-map-dots.png');
   background-position: center bottom;
+  filter:grayscale(100%);
   background-repeat: no-repeat;
-  background-size: min(1500px, 130vw) auto;
+  background-size: 100vw ;
   content: '';
-  opacity: 0.22;
+  opacity: 0.3;
 }
 
 .teen-star-light {
@@ -37,6 +38,7 @@
   z-index: -1;
   top: 7%;
   width: 360px;
+  filter: grayscale(100%);
   height: auto;
   pointer-events: none;
 }
@@ -58,6 +60,12 @@
   left: 0;
   height: 600px;
 }
+
+.profile-card-outer .profile-card-inner{
+  background: #EDEDED;
+  box-shadow: none;
+}
+
 
 .teen-star-podium {
   position: absolute;
@@ -103,9 +111,21 @@
   width: min(360px, calc(100vw - 40px));
   max-width: 360px;
   transform: translateX(-50%);
+  filter: grayscale(100%);
 }
 
-@media (max-width: 700px) {
+.blend{
+  background: linear-gradient(transparent, white);
+  height: 30vh;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 900px) {
   .teen-star-hero {
     min-height: 750px;
   }
@@ -148,7 +168,7 @@
   }
 
   .teen-star-podium {
-    width: min(350px, calc(80vw - 24px));
+    width: min(350px, calc(100% - 24px));
     height: 180px;
     clip-path: polygon(17% 0, 83% 0, 100% 13%, 100% 100%, 0 100%, 0 13%);
   }
@@ -159,7 +179,7 @@
 
   .teen-star-stage .teen-star-featured-profile {
     bottom: 180px;
-    width: min(320px, calc(80vw - 40px));
+    width: min(320px, calc(100% - 32px));
     max-width: 320px;
   }
 }
@@ -169,4 +189,12 @@
     width: min(290px, calc(80vw - 40px));
     max-width: 290px;
   }
+}
+/* Ensure the black placard maintains its shape when name and title are blank */
+.teen-star-featured-profile .profile-black-placard {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

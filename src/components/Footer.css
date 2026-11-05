@@ -459,9 +459,9 @@
 }
 
 /* ==========================================================================
-   GIANT WATERMARK (Width equivalent to 102% of page view width / 102vw)
+   GIANT WATERMARK (Width equivalent to 102% of page view width / 100vw)
    Font: Sofia Sans Extra Condensed 900
-   Aspect ratio of "CHRESTHOS": ~3.6 -> font-size: calc(102vw / 3.6)
+   Aspect ratio of "CHRESTHOS": ~3.6 -> font-size: calc(100vw / 3.6)
    Gradient Fill: #FFFFFF (100% opacity) at top -> rgba(255,255,255,0) at bottom
    ========================================================================== */
 .footer-watermark-wrapper {
@@ -469,7 +469,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 102vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -482,16 +482,16 @@
 .footer-watermark {
   font-family: var(--font-extra-condensed), 'Sofia Sans Extra Condensed', sans-serif;
   font-weight: 900;
-  font-size: calc(102vw / 3.6);
+  font-size: calc(100vw / 3.6);
   line-height: 0.82;
   letter-spacing: 0;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient( white 10%, transparent 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   display: block;
-  transform: translateY(calc(102vw / 3.6 * 0.045));
+  transform: translateY(calc(100vw / 3.6 * 0.045));
 }
 
 /* ==========================================================================
@@ -661,15 +661,15 @@
     bottom: -49px;
   }
 
-  /* Mobile Watermark (Width equivalent to 102% of page view width / 102vw) */
+  /* Mobile Watermark (Width equivalent to 102% of page view width / 100vw) */
   .footer-watermark-wrapper {
     bottom: 0px;
-    width: 102vw;
+    width: 100vw;
   }
 
   .footer-watermark {
-    font-size: calc(102vw / 3.82);
+    font-size: calc(100vw / 3.82);
     line-height: 0.82;
-    transform: translateY(calc(102vw / 3.82 * 0.08));
+    transform: translateY(calc(100vw / 3.82 * 0.08));
   }
 }

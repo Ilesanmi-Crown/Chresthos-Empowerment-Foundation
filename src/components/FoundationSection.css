@@ -29,6 +29,7 @@
   top: 80px;
   transform: translateX(-50%);
   pointer-events: none;
+  opacity: 0.6;
 }
 
 .foundation-mid-map-wrapper .foundation-map-item .map-img {
@@ -38,6 +39,13 @@
 }
 
 /* Map 2 Properties (Desktop: 2391px x 765px, 20% opacity) */
+.foundation-mid-map-wrapper .foundation-map-item.map-item-3,
+.foundation-mid-map-wrapper .foundation-map-item.map-item-1,
+.foundation-mid-map-wrapper .foundation-map-item.map1 {
+  top: 0;
+  width: 75vw;
+}
+
 .foundation-mid-map-wrapper .foundation-map-item.map-item-2 {
   width: 100vw;
 }
@@ -188,6 +196,13 @@
   }
 
   /* Mobile Map 2: Exact middle of the 48px space between What Do We Do and Outreaches */
+  .foundation-mid-map-wrapper .foundation-map-item.map-item-3,
+  .foundation-mid-map-wrapper .foundation-map-item.map-item-1,
+  .foundation-mid-map-wrapper .foundation-map-item.map1 {
+    top: 0;
+    width: 85vw;
+  }
+
   .foundation-mid-map-wrapper .foundation-map-item.map-item-2 {
     top: 80px;
     width: 100vw;

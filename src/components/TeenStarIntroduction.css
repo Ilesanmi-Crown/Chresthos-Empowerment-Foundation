@@ -84,9 +84,9 @@
   transform: rotate(5deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .teen-star-introduction {
-    width: calc(100% - 48px);
+    width: min(100% - 32px, 500px);
     padding: 46px 0 72px;
   }
 

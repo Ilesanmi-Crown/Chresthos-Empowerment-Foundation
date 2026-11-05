@@ -31,6 +31,9 @@
   --figma-mobile-w: 440px;
   --figma-mobile-h: 8373px;
   --container-max-w: 1380px;
+  --laptop-max-w: 1440px;
+  --mobile-max-w: 440px;
+  --mobile-gutter: 16px;
 
   /* Spacing Scale */
   --space-xs: 4px;

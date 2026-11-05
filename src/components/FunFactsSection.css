@@ -225,7 +225,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .fun-facts-section {
     margin: 40px auto 60px;
     padding: 0 16px;
@@ -246,8 +246,10 @@
 
   .fun-facts-grid {
     grid-template-columns: 1fr;
-    max-width: 300px;
-    gap: 40px;
+    width: 100%;
+    max-width: min(100%, 340px);
+    gap: 32px;
+    margin: 0 auto;
   }
 
   .fun-fact-card {

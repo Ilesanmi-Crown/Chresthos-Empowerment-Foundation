@@ -63,6 +63,16 @@ export const OUTREACHES = [
   }
 ];
 
+// The Next Teen Star featured spotlight (The Next Teen Star page hero)
+// Update this object when the next Teen Star winner has been chosen
+export const NEXT_TEEN_STAR = {
+  name: "Winner's Name", // e.g. 'Jane Doe' (leave empty string if not yet chosen)
+  title: 'WINNER TNTS,2026', // e.g. '2026 Winner' (leave empty string if not yet chosen)
+  role: '', // alternative alias for title
+  image: '/assets/Subtract-teen-star.png', // Silhouette placeholder or winner photo cutout
+  alt: 'The Next Teen Star'
+};
+
 // Exact Partners from Figma Design (Wireframe 30 / Wireframes 10, 11, 13 / website design)
 export const PARTNERS = [
   {

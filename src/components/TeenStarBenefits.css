@@ -15,6 +15,7 @@
   transform: translateX(-50%);
   pointer-events: none;
   user-select: none;
+  opacity: 0.6;
 }
 
 .teen-star-benefits-map img {
@@ -110,14 +111,16 @@
   line-height: 1.55;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .teen-star-benefits {
     padding: 52px 24px 72px;
   }
 
   .teen-star-benefits-map {
     top: 80px;
-    width: 100vw;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .teen-star-benefits-header {

@@ -37,7 +37,7 @@ a.figma-partner-card{
   width: 100vw;
   max-width: none;
   object-fit: contain;
-  opacity: 0.50;
+  opacity: 0.30;
   pointer-events: none;
 }
 
@@ -239,7 +239,7 @@ a.figma-partner-card{
 /* ==========================================================================
    Mobile Specifications (Figma Frame 117 on 440px canvas)
    ========================================================================== */
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .testimonials-section {
     margin: 40px auto 80px;
     padding: 0 16px;
@@ -248,7 +248,7 @@ a.figma-partner-card{
   .testimonials-bg-map {
     width: 1500px;
     height: 600px;
-    opacity: 0.10;
+    opacity: 0.06;
   }
 
   /* Title: 24px, line-height 36px, Poppins 800 */
