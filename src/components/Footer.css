@@ -486,7 +486,7 @@
   line-height: 0.82;
   letter-spacing: 0;
   text-transform: uppercase;
-  background: linear-gradient( white 10%, transparent 80%);
+  background: linear-gradient( white , transparent 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
