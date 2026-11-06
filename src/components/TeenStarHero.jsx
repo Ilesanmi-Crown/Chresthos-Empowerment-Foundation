@@ -19,9 +19,9 @@ export default function TeenStarHero() {
       <img className="teen-star-light teen-star-light-right" src="/assets/lights.png" alt="" />
 
       <div className="teen-star-stage">
-        <div className="profile-card-outer teen-star-featured-profile">
-          <article className="profile-card-inner">
-            {/* <div className="profile-card-rings-bg" aria-hidden="true">
+        <div className="teen-star-profile-card-outer teen-star-featured-profile">
+          <article className="teen-star-profile-card-inner">
+            {/* <div className="teen-star-profile-card-rings-bg" aria-hidden="true">
               <svg viewBox="0 0 400 520" fill="none" preserveAspectRatio="xMidYMid slice" className="concentric-rings-svg">
                 <circle cx="200" cy="220" r="75" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
                 <circle cx="200" cy="220" r="130" stroke="rgba(255, 255, 255, 0.13)" strokeWidth="1.5" />
