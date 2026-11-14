@@ -375,9 +375,43 @@
   max-width: 373px;
 }
 
-/* Contact Pill Button (Figma Frame 99: 76px x 39px, Radius: 20px, Fill: #ffffff) */
-.contact-btn-wrapper {
+/* Contact Pill Button & Social Media Icons Row */
+.contact-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
   margin-top: 8px;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  text-decoration: none;
+  transition: transform var(--transition-fast, 0.15s), opacity var(--transition-fast, 0.15s);
+  opacity: 0.95;
+}
+
+.footer-social-link:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.footer-social-icon {
+  display: block;
+  max-width: 20px;
+  max-height: 20px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .contact-pill-btn {
@@ -610,7 +644,26 @@
     max-width: 250px;
   }
 
-  /* Contact Pill Button on Mobile (Figma Frame 99: 43.2px x 22.2px, Radius: 11.4px) */
+  /* Contact Pill Button & Social Media Icons on Mobile */
+  .contact-actions-row {
+    gap: 14px;
+    margin-top: 6px;
+  }
+
+  .footer-social-icons {
+    gap: 10px;
+  }
+
+  .footer-social-link {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-social-icon {
+    max-width: 13px;
+    max-height: 13px;
+  }
+
   .contact-pill-btn {
     width: 43.2px;
     height: 22.2px;

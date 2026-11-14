@@ -9,7 +9,7 @@ export default function FoundationSection() {
       <div className="foundation-overview-block">
         <div className="foundation-block-content">
           <span className="section-eyebrow">THE FOUNDATION</span>
-          <h2 className="section-title">What do we do</h2>
+          <h2 className="section-title">Who we are</h2>
           <p className="foundation-mission-text">
             CHRESTHOS Empowerment Foundation is a dedicated nonprofit organization committed to transforming lives and communities through targeted, compassionate interventions. We focus on unlocking the potential of vulnerable populations, particularly children and young individuals, by providing comprehensive support, educational resources, and sustainable community development solutions.
           </p>
@@ -24,11 +24,11 @@ export default function FoundationSection() {
           <h2 className="section-title outreaches-title">Outreaches</h2>
           
           <p className="foundation-mission-text outreaches-mission-text">
-            CHRESTHOS Empowerment Foundation is a dedicated nonprofit organization committed to transforming lives and communities through targeted, compassionate interventions. We focus on unlocking the potential of vulnerable populations, particularly children and young individuals, by providing comprehensive support, educational resources, and sustainable community development solutions.
+            We are dedicated to making a lasting impact in communities through meaningful outreach programmes and humanitarian initiatives. The foundation reaches out to underserved individuals and families, offering support, encouragement, and resources that help improve lives. Through these initiatives, Chresthos seeks to address pressing community needs, restore hope, promote inclusion, and create opportunities for a better future. 
           </p>
 
           <p className="outreaches-highlight-statement">
-            We are a dedicated nonprofit organization committed to breaking cycles of disadvantage by empowering children, young individuals, and communities.
+            Every outreach is an opportunity to connect with people, uplift communities, and make a difference where it matters most.
           </p>
 
           <div className="outreaches-media-grid">

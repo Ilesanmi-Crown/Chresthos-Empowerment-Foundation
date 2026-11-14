@@ -104,7 +104,7 @@ export const PARTNERS = [
   },
   {
     id: 'partner-4',
-    name: 'Mrs. Grace Evaly',
+    name: 'Miss Grace Evaly',
     role: 'CEO OF GLOBALVARA NIGERIA LTD',
     image: '/assets/partner-mrs-grace.png',
     pattern: 'circles',
@@ -137,7 +137,7 @@ export const PARTNERS = [
     pattern: 'circles',
     isLogo: true,
     externalUrl: 'https://ositaiheme.org/',
-    bio: ["The Osita Iheme Foundation is a Nigerian non-profit organization founded by actor Osita Iheme, popularly known as “Paw Paw,” dedicated to empowering underprivileged children and young people.", "The foundation supports access to education, shelter, healthcare, and technology-driven opportunities, helping young people build brighter futures.", "Headquartered in Owerri, Imo State, the foundation has reportedly supported over 2,400 projects across Africa, reflecting its commitment to improving lives and strengthening communities."]
+    bio: ["The Osita Iheme Foundation is a Nigerian non-profit organisation founded by actor Osita Iheme, popularly known as “Paw Paw,” dedicated to empowering underprivileged children and young people.", "The foundation supports access to education, shelter, healthcare, and technology-driven opportunities, helping young people build brighter futures.", "Headquartered in Owerri, Imo State, the foundation has reportedly supported over 2,400 projects across Africa, reflecting its commitment to improving lives and strengthening communities."]
   },
   {
     id: 'partner-8',
@@ -219,10 +219,10 @@ export const TEAM_MEMBERS = [
 ];
 
 export const TESTIMONIAL = {
-  quote: `“Working alongside the Chresthos Empowerment Foundation has shown me firsthand the incredible dedication they bring to vulnerable children and young people.\n\nTheir holistic approach—from regular school attendance support to mentorship programs—truly transforms communities from the ground up. It’s an organization with real heart and undeniable impact.”`,
-  author: 'Dr. Chinedu Arinze',
-  role: 'Child Psychologist & Advocate',
-  image: '/assets/testimonial-doctor.png',
+  quote: `“I am pleased to testify to the impactful work of CHRESTHOS FOUNDATION. Their dedication to empowering lives, supporting the vulnerable and serving the community with integrity and compassion - truly commendable. My encounter with the foundation was marked by professionalism, transparency and genuine care. I highly recommend their work to anyone seeking to partner with an organisation that truly makes a difference.”`,
+  author: 'Miss Nwanchukwu Chioma ',
+  role: 'Nurse Assistance, Health Care Personnel',
+  image: '/assets/Miss-Nwanchukwu-Chioma.png',
   rating: 5
 };
 
@@ -233,3 +233,31 @@ export const CONTACT_INFO = {
   website: 'WWW.CHRESTHOSEMPOWERMENTFOUNDATION.COM',
   copyright: '2026 Chresthos. All rights reserved'
 };
+
+export const SOCIAL_LINKS = [
+  {
+    name: 'YouTube',
+    url: 'https://www.youtube.com/@CHRESTHOSTV',
+    icon: '/assets/social-media-icons/youtube-icon.png'
+  },
+  {
+    name: 'Facebook',
+    url: 'https://web.facebook.com/people/Chresthos-Empowerment-tv/61581422525501/?name=xhp_nt__fb__action__open_user',
+    icon: '/assets/social-media-icons/facebook-icon.png'
+  },
+  {
+    name: 'TikTok',
+    url: 'https://www.tiktok.com/@chresthos',
+    icon: '/assets/social-media-icons/tiktok-icon.png'
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/chresthostv',
+    icon: '/assets/social-media-icons/instagram-icon.png'
+  },
+  {
+    name: 'WhatsApp',
+    url: 'https://wa.me/2348154101478',
+    icon: '/assets/social-media-icons/whatsapp-icon.png'
+  }
+];

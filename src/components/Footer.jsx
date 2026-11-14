@@ -1,5 +1,5 @@
 import React from 'react';
-import { CONTACT_INFO } from '../data/homeData';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../data/homeData';
 import ContactModal from './ContactModal';
 import './Footer.css';
 
@@ -207,8 +207,8 @@ export default function Footer() {
                   </p>
                 </div>
 
-                {/* Contact Pill Button (Figma Frame 99: 76px x 39px, Radius 20px) */}
-                <div className="contact-btn-wrapper">
+                {/* Contact Pill Button & Social Media Icons */}
+                <div className="contact-actions-row contact-btn-wrapper">
                   <button
                     type="button"
                     className="contact-pill-btn"
@@ -217,6 +217,25 @@ export default function Footer() {
                   >
                     <span>Contact</span>
                   </button>
+
+                  <div className="footer-social-icons" aria-label="Social media links">
+                    {SOCIAL_LINKS.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-social-link"
+                        aria-label={item.name}
+                      >
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          className={`footer-social-icon icon-${item.name.toLowerCase()}`}
+                        />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
