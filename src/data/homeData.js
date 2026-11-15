@@ -87,7 +87,7 @@ export const PARTNERS = [
   {
     id: 'partner-2',
     name: 'Ms. Ogechi Ejimofor',
-    role: 'MD/CEO, FOUNDER - DECORATING DELIGHTS',
+    role: 'MD/CEO, FOUNDER - LAVISH DESIGN & DECORATING DELIGHTS',
     image: '/assets/partner-ms-ogechi.png',
     pattern: 'prisms',
     isCutout: true,
