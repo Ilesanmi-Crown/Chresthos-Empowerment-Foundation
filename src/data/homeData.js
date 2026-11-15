@@ -87,7 +87,7 @@ export const PARTNERS = [
   {
     id: 'partner-2',
     name: 'Ms. Ogechi Ejimofor',
-    role: 'MD/CEO, FOUNDER - THE TRAVELCLUB & DECORATING DELIGHTS',
+    role: 'MD/CEO, FOUNDER - DECORATING DELIGHTS',
     image: '/assets/partner-ms-ogechi.png',
     pattern: 'prisms',
     isCutout: true,
@@ -163,7 +163,7 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 'team-2',
-    name: 'Mrs. Akachukwu Purity',
+    name: 'Miss Akachukwu Purity',
     role: 'FOUNDER, PURITY NEEDLES',
     image: '/assets/team-akachukwu-chinazam.png',
     pattern: 'stripes',
