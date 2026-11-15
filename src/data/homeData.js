@@ -257,7 +257,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'WhatsApp',
-    url: 'https://wa.me/2348154101478',
+    url: 'https://wa.me/447506417508',
     icon: '/assets/social-media-icons/whatsapp-icon.png'
   }
 ];
