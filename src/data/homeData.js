@@ -229,7 +229,7 @@ export const TESTIMONIAL = {
 export const CONTACT_INFO = {
   address: 'Sparklight estate, Block H, Plot 2, Ibafo. Opposite MFM Ibadan expressway, Ogun State, Nigeria.',
   email: 'chesthosef@gmail.com',
-  phones: ['+447506417508', '+2348154101478', '+2348143852409'],
+  phones: ['+2348154101478', '+2348110603135'],
   website: 'WWW.CHRESTHOSEMPOWERMENTFOUNDATION.COM',
   copyright: '2026 Chresthos. All rights reserved'
 };
