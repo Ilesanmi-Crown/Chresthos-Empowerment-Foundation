@@ -12,7 +12,7 @@ export default function DonatePage() {
 
   const copyAccountNumber = async () => {
     try {
-      await navigator.clipboard.writeText('0000000000');
+      await navigator.clipboard.writeText('1020736335');
       setAccountCopied(true);
       window.setTimeout(() => setAccountCopied(false), 1800);
     } catch {
@@ -50,16 +50,17 @@ export default function DonatePage() {
             <div className="donate-transfer-panel">
               <div className="donate-panel-heading">
                 <h2>Bank transfer</h2>
+                <h3>PISTOS PICTURES INTERNATIONAL LIMITED</h3>
               </div>
               <dl className="donate-bank-details">
                 <div>
                   <dt>Recipient&apos;s bank</dt>
-                  <dd>Zenith Bank</dd>
+                  <dd>United Bank Of Africa</dd>
                 </div>
                 <div>
                   <dt>Account number</dt>
                   <dd className="donate-account-value">
-                    <span>0000000000</span>
+                    <span>1020736335</span>
                     <button
                       className="donate-copy-button"
                       type="button"
