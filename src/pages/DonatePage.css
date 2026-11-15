@@ -105,7 +105,7 @@
 }
 
 .donate-panel-heading {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
@@ -113,6 +113,11 @@
 
 .donate-panel-heading h2 {
   font-size: 13px;
+  font-weight: 600;
+}
+
+.donate-panel-heading h3{
+  font-size: 12px;
   font-weight: 600;
 }
 
