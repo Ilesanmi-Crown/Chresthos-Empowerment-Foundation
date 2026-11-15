@@ -45,10 +45,11 @@ export default function FoundationSection() {
                     allowFullScreen
                     loading="lazy"
                   />
+{/*
                   <div className="outreach-overlay">
                     <h3 className="outreach-card-title">{item.title}</h3>
                     <p className="outreach-card-desc">{item.description}</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
