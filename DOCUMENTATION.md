@@ -209,6 +209,7 @@ Most reusable home-page content, navigation links, and gallery records are defin
 | `CONTACT_INFO` | Physical address, email, phone numbers, website label, and copyright text | `Footer`, `ContactModal` |
 | `SOCIAL_LINKS` | Five social media objects (Facebook, Instagram, TikTok, WhatsApp, YouTube) with names, links, and icons | `Footer` |
 | `GALLERY_IMAGES` | 35 image objects with `id`, `image`, `src`, and `alt` properties mapped to design layout sections | `GalleryPage` |
+| `NEXT_TEEN_STAR` | Winner object containing `name`, `title`, `role`, `image` path, and `alt` text for the competition hero stage | `TeenStarHero` |
 
 ### Client-side storage and cookies
 
@@ -226,6 +227,47 @@ The website implementation manages client-side storage as follows:
 - Much of the Foundation, Donate, Teen Star, Gallery, Privacy Policy, Contact modal, and Get Involved copy is written directly in the corresponding JSX files. Search those component files to update that text.
 - Images are referenced by `/assets/...` URLs. Place replacement files in `public/assets/` or `public/assets/gallery-images/` and update the corresponding path in `homeData.js` or component JSX.
 - Profile routes are generated from each person's `name` by `src/utils/slugify.js`. Update route links and slug-sensitive code if naming conventions change.
+
+### Activating "The Next Teen Star" Winner State
+
+The hero section of the competition page (`/the-next-teen-star`) is currently styled in a desaturated, pre-event placeholder state while awaiting the crowning of the competition winner. Once the client has selected and announced the winner, activate the full celebratory, full-color winner stage by completing the following four steps:
+
+#### 1. Update winner details in `src/data/homeData.js`
+Locate the `NEXT_TEEN_STAR` export and replace the placeholder fields:
+```javascript
+export const NEXT_TEEN_STAR = {
+  name: "Winner's Full Name",          // e.g. "Grace Evaly"
+  title: "WINNER TNTS, 2026",          // Official award or winning title
+  role: "",                            // Optional additional subtitle
+  image: "/assets/winner-photo.png",   // Cutout portrait saved in /public/assets/
+  alt: "The Next Teen Star Winner"     // Descriptive alt text
+};
+```
+Save the winner's cutout photo (a transparent PNG with background removed) into `public/assets/` and point `image` to that file path.
+
+#### 2. Re-enable concentric vector rings in `src/components/TeenStarHero.jsx`
+In `src/components/TeenStarHero.jsx` (lines 24-32), uncomment the `.teen-star-profile-card-rings-bg` block so the radiating concentric rings render behind the winner's portrait:
+```jsx
+<div className="teen-star-profile-card-rings-bg" aria-hidden="true">
+  <svg viewBox="0 0 400 520" fill="none" preserveAspectRatio="xMidYMid slice" className="concentric-rings-svg">
+    <circle cx="200" cy="220" r="75" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
+    <circle cx="200" cy="220" r="130" stroke="rgba(255, 255, 255, 0.13)" strokeWidth="1.5" />
+    <circle cx="200" cy="220" r="185" stroke="rgba(255, 255, 255, 0.10)" strokeWidth="1.5" />
+    <circle cx="200" cy="220" r="240" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="1.5" />
+    <circle cx="200" cy="220" r="295" stroke="rgba(255, 255, 255, 0.06)" strokeWidth="1.5" />
+  </svg>
+</div>
+```
+
+#### 3. Restore full color and remove grayscale filters in `src/components/TeenStarHero.css`
+The pre-event state applies grayscale filters across the hero elements. Update these rules to activate full color:
+- **Profile card and golden stars**: In `.teen-star-stage .teen-star-featured-profile` (line 144), remove `filter: grayscale(100%);` so the winner portrait, placard, and the 5-star golden trophy overlay (`/assets/stars.png`) render in full vibrant color.
+- **Card background**: In `.teen-star-profile-card-outer .teen-star-profile-card-inner` (line 89), change the flat grey `background: #EDEDED;` to the signature purple gradient (e.g. `background: radial-gradient(circle at 50% 50%, #8A38F5 0%, #6818D8 100%);` or `background: var(--color-purple, #8A38F5);`).
+- **Stage spotlights**: In `.teen-star-light` (line 41), remove `filter: grayscale(100%);` so the stage lighting fixtures beam their purple-violet cones across the stage.
+- **Background map**: In `.teen-star-hero::before` (line 29), remove `filter: grayscale(100%);` so the dot-matrix world map displays in its original lavender/purple tint.
+
+#### 4. Build and verify
+Run `npm run build` to verify image optimization of the new winner portrait asset and ensure zero build warnings or errors. Check the live page on mobile (360px), tablet, and desktop viewports to ensure the portrait remains centered and the golden stars overlay rests cleanly over the placard and podium.
 
 ## 5. Styling and `className` Conventions
 
