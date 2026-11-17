@@ -50,7 +50,7 @@ export default function DonatePage() {
             <div className="donate-transfer-panel">
               <div className="donate-panel-heading">
                 <h2>Bank transfer</h2>
-                <h3>PISTOS PICTURES INTERNATIONAL LIMITED</h3>
+                <h3>CEF % Pistos pictures Int Ltd</h3>
               </div>
               <dl className="donate-bank-details">
                 <div>
