@@ -28,6 +28,8 @@
 @media (max-width: 600px) {
   .card-copyright-row {
     flex-wrap: wrap;
+    font-size: 10px;
+    line-height: 15px;
     row-gap: 6px;
     text-align: center;
   }
