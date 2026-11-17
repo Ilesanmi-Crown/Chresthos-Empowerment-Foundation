@@ -209,6 +209,34 @@ export default function Footer() {
                   </p>
                 </div>
 
+                {/* WhatsApp (Duplicate of Phone Row with WhatsApp Icon) */}
+                <div className="contact-row">
+                  <div className="contact-icon-wrapper" aria-hidden="true">
+                    <img 
+                      src="/assets/social-media-icons/whatsapp-icon.png" 
+                      alt="" 
+                      className="contact-whatsapp-icon"
+                      width="16" 
+                      height="16" 
+                    />
+                  </div>
+                  <p className="contact-text contact-phones">
+                    {(CONTACT_INFO.whatsapp || ['+447506417508', '+2348154101478']).map((number, i, arr) => (
+                      <React.Fragment key={i}>
+                        <a
+                          href={`https://wa.me/${number.replace(/[^0-9]/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="contact-link"
+                        >
+                          {number}
+                        </a>
+                        {i < arr.length - 1 ? ', ' : ''}
+                      </React.Fragment>
+                    ))}
+                  </p>
+                </div>
+
                 {/* Contact Pill Button & Social Media Icons */}
                 <div className="contact-actions-row contact-btn-wrapper">
                   <button

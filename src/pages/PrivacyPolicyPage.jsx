@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
               <div className="privacy-placeholder-box">
                 <p><strong>Organization:</strong> [BUSINESS NAME: Chresthos Empowerment Foundation]</p>
                 <p><strong>Physical Address:</strong> [PHYSICAL ADDRESS: Sparklight estate, Block H, Plot 2, Ibafo. Opposite MFM Ibadan expressway, Ogun State, Nigeria]</p>
-                <p><strong>Contact Email:</strong> [CONTACT EMAIL: chesthosef@gmail.com]</p>
+                <p><strong>Contact Email:</strong> [CONTACT EMAIL: chresthosef@gmail.com]</p>
                 <p><strong>Phone:</strong> [PHONE NUMBER: +2348110603135]</p>
               </div>
             </section>
@@ -187,7 +187,7 @@ export default function PrivacyPolicyPage() {
                 If you have questions about this policy or our data practices, please reach out to us:
               </p>
               <div className="privacy-placeholder-box">
-                <p><strong>Email:</strong> [CONTACT EMAIL: chesthosef@gmail.com]</p>
+                <p><strong>Email:</strong> [CONTACT EMAIL: chresthosef@gmail.com]</p>
                 <p><strong>Phone:</strong> [PHONE NUMBER: +2348110603135]</p>
                 <p><strong>Address:</strong> [PHYSICAL ADDRESS: Sparklight estate, Block H, Plot 2, Ibafo. Opposite MFM Ibadan expressway, Ogun State, Nigeria]</p>
               </div>

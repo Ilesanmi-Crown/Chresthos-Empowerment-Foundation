@@ -206,7 +206,7 @@ Most reusable home-page content, navigation links, and gallery records are defin
 | `PARTNERS` | Eight partner records with names, roles, images, patterns, bios, and optional URLs | `TeamSection`, `PersonalProfile`, `HomePage` |
 | `TEAM_MEMBERS` | Seven team records with names, roles, images, patterns, and bios | `TeamSection`, `PersonalProfile`, `HomePage` |
 | `TESTIMONIAL` | One quote, author, role, image, and star rating | `TestimonialsSection` |
-| `CONTACT_INFO` | Physical address, email, phone numbers, website label, and copyright text | `Footer`, `ContactModal` |
+| `CONTACT_INFO` | Physical address, email, phone numbers, WhatsApp numbers, website label, and copyright text | `Footer`, `ContactModal` |
 | `SOCIAL_LINKS` | Five social media objects (Facebook, Instagram, TikTok, WhatsApp, YouTube) with names, links, and icons | `Footer` |
 | `GALLERY_IMAGES` | 35 image objects with `id`, `image`, `src`, and `alt` properties mapped to design layout sections | `GalleryPage` |
 | `NEXT_TEEN_STAR` | Winner object containing `name`, `title`, `role`, `image` path, and `alt` text for the competition hero stage | `TeenStarHero` |
