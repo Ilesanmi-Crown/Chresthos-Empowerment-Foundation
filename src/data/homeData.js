@@ -123,8 +123,8 @@ export const PARTNERS = [
   },
    {
     id: 'partner-6',
-    name: 'Mrs. Princess Abiye',
-    role: '',
+    name: 'Princess Abiye',
+    role: 'CEO/FOUNDER OF SPOTON, FILM PRODUCER',
     image: '/assets/partner-mrs-princess.png',
     pattern: 'diamonds',
     isCutout: true,
