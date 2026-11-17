@@ -1,0 +1,480 @@
+/* ========================================================
+   SKELETON LOADING SYSTEM
+   Additive styles for skeleton loaders and per-image placeholders
+   ======================================================== */
+
+:root {
+  --skeleton-base: #e9e9ed;
+  --skeleton-shimmer: #f5f5f8;
+  --skeleton-radius: 6px;
+}
+
+/* Core Shimmer Effect (1.4s linear infinite sweep from left to right) */
+.skeleton {
+  background: var(--skeleton-base);
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-base) 0%,
+    var(--skeleton-shimmer) 50%,
+    var(--skeleton-base) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s linear infinite;
+  border-radius: var(--skeleton-radius);
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Accessibility: Disable motion for users with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: #ebebee;
+  }
+}
+
+/* Shared Building Blocks */
+.skeleton-line {
+  display: block;
+  height: 14px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skeleton-line:last-child {
+  margin-bottom: 0;
+}
+
+.skeleton-heading {
+  display: block;
+  height: 36px;
+  width: 60%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.skeleton-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.skeleton-avatar {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skeleton-button {
+  display: inline-block;
+  height: 44px;
+  width: 140px;
+  border-radius: 50px;
+}
+
+.skeleton-card {
+  display: block;
+  width: 100%;
+  background-color: var(--skeleton-base);
+  border-radius: var(--skeleton-radius);
+}
+
+/* Per-Image Image Loader Wrapper (Reserves space without layout shift) */
+.skeleton-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.skeleton-img-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.skeleton-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skeleton-img-wrapper img.img-loading {
+  opacity: 0;
+}
+
+.skeleton-img-wrapper img.img-loaded {
+  opacity: 1;
+}
+
+/* ========================================================
+   PAGE-SPECIFIC SKELETON CONTAINERS (Mirrors page layouts)
+   ======================================================== */
+
+/* Shared Skeleton Page Shell */
+.skeleton-page-shell {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.skeleton-navbar-mock {
+  position: fixed;
+  top: 21px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  max-width: 1380px;
+  margin: 0 auto;
+  border-radius: 50px;
+  z-index: 100;
+  padding: 0 30px;
+}
+
+/* --- HOME SKELETON --- */
+.home-skeleton-main {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 130px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.home-skeleton-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.home-skeleton-cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.home-skeleton-child-card {
+  width: clamp(200px, 22vw, 290px);
+  aspect-ratio: 280 / 370;
+  border-radius: 20px;
+}
+
+.home-skeleton-funfacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  padding: 24px;
+  background: #fafafc;
+  border-radius: 16px;
+}
+
+.home-skeleton-fact-item {
+  height: 70px;
+  flex: 1;
+  border-radius: 8px;
+}
+
+.home-skeleton-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.home-skeleton-member-card {
+  aspect-ratio: 280 / 360;
+  border-radius: 16px;
+}
+
+/* --- GALLERY SKELETON --- */
+.gallery-skeleton-main {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 140px 24px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.gallery-skeleton-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.gallery-skeleton-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 2.3vw, 32px);
+  width: 100%;
+  margin-top: 24px;
+}
+
+.gallery-skeleton-item-2col {
+  aspect-ratio: 668 / 400;
+  border-radius: 0;
+}
+
+.gallery-skeleton-grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(18px, 2.2vw, 30px);
+  width: 100%;
+}
+
+.gallery-skeleton-item-4col {
+  aspect-ratio: 3 / 4;
+  border-radius: 0;
+}
+
+.gallery-skeleton-flex-3col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+}
+
+.gallery-skeleton-item-3col-1 {
+  height: clamp(240px, 25vw, 400px);
+  aspect-ratio: 320 / 400;
+}
+
+.gallery-skeleton-item-3col-2 {
+  height: clamp(240px, 25vw, 400px);
+  aspect-ratio: 400 / 400;
+}
+
+.gallery-skeleton-item-3col-3 {
+  height: clamp(240px, 25vw, 400px);
+  aspect-ratio: 434 / 400;
+}
+
+/* --- TEEN STAR SKELETON --- */
+.teenstar-skeleton-main {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.teenstar-skeleton-hero {
+  width: 100%;
+  height: clamp(340px, 35vw, 500px);
+  border-radius: 24px;
+}
+
+.teenstar-skeleton-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.teenstar-skeleton-benefit-card {
+  height: 220px;
+  border-radius: 16px;
+}
+
+/* --- DONATE SKELETON --- */
+.donate-skeleton-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+
+.donate-skeleton-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: center;
+}
+
+.donate-skeleton-child {
+  aspect-ratio: 480 / 560;
+  border-radius: 20px;
+}
+
+.donate-skeleton-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donate-skeleton-panel {
+  height: 260px;
+  border-radius: 20px;
+}
+
+/* --- PROFILE SKELETON --- */
+.profile-skeleton-main {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 130px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-skeleton-back {
+  width: 140px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.profile-skeleton-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: clamp(32px, 4vw, 60px);
+  width: 100%;
+}
+
+.profile-skeleton-card {
+  aspect-ratio: 400 / 520;
+  border-radius: 24px;
+}
+
+.profile-skeleton-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- ERROR BOUNDARY FALLBACK --- */
+.route-error-container {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.route-error-heading {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.route-error-text {
+  font-size: 15px;
+  color: #555555;
+  max-width: 440px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.route-error-btn {
+  padding: 13px 32px;
+  background-color: #8a38f5;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.route-error-btn:hover {
+  background-color: #7827e3;
+  transform: translateY(-1px);
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+   ======================================================== */
+@media (max-width: 900px) {
+  .home-skeleton-cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-skeleton-funfacts {
+    flex-direction: column;
+  }
+  .home-skeleton-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-skeleton-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .gallery-skeleton-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .gallery-skeleton-flex-3col {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .gallery-skeleton-item-3col-1,
+  .gallery-skeleton-item-3col-2,
+  .gallery-skeleton-item-3col-3 {
+    height: auto;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .teenstar-skeleton-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donate-skeleton-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-skeleton-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-skeleton-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

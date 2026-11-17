@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../data/homeData';
 import ContactModal from './ContactModal';
 import './Footer.css';
+import './FooterPrivacyLink.css';
 
 export default function Footer() {
   const [contactModalOpen, setContactModalOpen] = React.useState(false);
@@ -253,6 +255,7 @@ export default function Footer() {
               </svg>
             </div>
             <span className="copyright-text">{CONTACT_INFO.copyright}</span>
+            <Link to="/privacy-policy" className="footer-privacy-link">Privacy Policy</Link>
           </div>
         </div>
 

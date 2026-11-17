@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { HERO_CHILDREN } from '../data/homeData';
+import SkeletonImageLoader from './skeleton/SkeletonImageLoader';
 import './HeroSection.css';
 
 export default function HeroSection({ onGetInvolvedClick, onDonateClick }) {
@@ -108,7 +109,7 @@ export default function HeroSection({ onGetInvolvedClick, onDonateClick }) {
             {/* Center Background Card */}
             <div className="child-photo-card card-center-behind">
               <div className="card-inner">
-                <img 
+                <SkeletonImageLoader 
                   src={centerChild.image} 
                   alt={centerChild.alt}
                   className="child-image"
@@ -119,7 +120,7 @@ export default function HeroSection({ onGetInvolvedClick, onDonateClick }) {
             {/* Left Front Card (B&W Smiling Boy) */}
             <div className="child-photo-card card-left-front">
               <div className="card-inner">
-                <img 
+                <SkeletonImageLoader 
                   src={leftChild.image} 
                   alt={leftChild.alt}
                   className="child-image"
@@ -130,7 +131,7 @@ export default function HeroSection({ onGetInvolvedClick, onDonateClick }) {
             {/* Right Front Card (Child with arms raised) */}
             <div className="child-photo-card card-right-front">
               <div className="card-inner">
-                <img 
+                <SkeletonImageLoader 
                   src={rightChild.image} 
                   alt={rightChild.alt}
                   className="child-image"

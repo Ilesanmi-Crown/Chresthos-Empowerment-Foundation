@@ -1,7 +1,8 @@
 export const NAV_LINKS = [
   { label: 'Home', href: '/', hasDropdown: false },
-  { label: 'About us', href: '/#foundation', hasDropdown: false },
-  { label: 'Get involved', href: '/#outreaches', hasDropdown: false },
+  { label: 'About Us', href: '/#foundation', hasDropdown: false },
+  { label: 'Get Involved', href: '/#outreaches', hasDropdown: false },
+  { label: 'Gallery', href: '/gallery', hasDropdown: false },
   { label: 'TNTS', href: '/the-next-teen-star', hasDropdown: false },
 ];
 
@@ -259,5 +260,230 @@ export const SOCIAL_LINKS = [
     name: 'WhatsApp',
     url: 'https://wa.me/447506417508',
     icon: '/assets/social-media-icons/whatsapp-icon.png'
+  }
+];
+
+// All 35 gallery images from /public/assets/gallery-images in the exact design screenshot order
+export const GALLERY_IMAGES = [
+  // Screenshot 1 (2x2 grid)
+  {
+    id: 'gallery-1',
+    image: '/assets/gallery-images/photo_6041918426332205637_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205637_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 1'
+  },
+  {
+    id: 'gallery-2',
+    image: '/assets/gallery-images/photo_6041918426332205638_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205638_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 2'
+  },
+  {
+    id: 'gallery-3',
+    image: '/assets/gallery-images/photo_6041918426332205639_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205639_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 3'
+  },
+  {
+    id: 'gallery-4',
+    image: '/assets/gallery-images/photo_6041918426332205640_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205640_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 4'
+  },
+
+  // Screenshot 2 (3x2 grid)
+  {
+    id: 'gallery-5',
+    image: '/assets/gallery-images/photo_6041918426332205641_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205641_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 5'
+  },
+  {
+    id: 'gallery-6',
+    image: '/assets/gallery-images/photo_6041918426332205642_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205642_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 6'
+  },
+  {
+    id: 'gallery-7',
+    image: '/assets/gallery-images/photo_6041918426332205620_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205620_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 7'
+  },
+  {
+    id: 'gallery-8',
+    image: '/assets/gallery-images/photo_6041918426332205621_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205621_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 8'
+  },
+  {
+    id: 'gallery-9',
+    image: '/assets/gallery-images/photo_6041918426332205622_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205622_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 9'
+  },
+  {
+    id: 'gallery-10',
+    image: '/assets/gallery-images/photo_6041918426332205623_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205623_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 10'
+  },
+
+  // Screenshot 3 (3x2 grid)
+  {
+    id: 'gallery-11',
+    image: '/assets/gallery-images/photo_6041918426332205624_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205624_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 11'
+  },
+  {
+    id: 'gallery-12',
+    image: '/assets/gallery-images/photo_6041918426332205625_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205625_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 12'
+  },
+  {
+    id: 'gallery-13',
+    image: '/assets/gallery-images/photo_6041918426332205626_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205626_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 13'
+  },
+  {
+    id: 'gallery-14',
+    image: '/assets/gallery-images/photo_6041918426332205632_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205632_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 14'
+  },
+  {
+    id: 'gallery-15',
+    image: '/assets/gallery-images/photo_6041918426332205627_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205627_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 15'
+  },
+  {
+    id: 'gallery-16',
+    image: '/assets/gallery-images/photo_6041918426332205628_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205628_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 16'
+  },
+
+  // Screenshot 4 (3x2 grid)
+  {
+    id: 'gallery-17',
+    image: '/assets/gallery-images/photo_6041918426332205629_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205629_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 17'
+  },
+  {
+    id: 'gallery-18',
+    image: '/assets/gallery-images/photo_6041918426332205630_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205630_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 18'
+  },
+  {
+    id: 'gallery-19',
+    image: '/assets/gallery-images/photo_6041918426332205631_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205631_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 19'
+  },
+  {
+    id: 'gallery-20',
+    image: '/assets/gallery-images/photo_6041918426332205634_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205634_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 20'
+  },
+  {
+    id: 'gallery-21',
+    image: '/assets/gallery-images/photo_6041918426332205635_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205635_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 21'
+  },
+  {
+    id: 'gallery-22',
+    image: '/assets/gallery-images/photo_6041918426332205636_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205636_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 22'
+  },
+
+  // Screenshot 5 (3x2 grid)
+  {
+    id: 'gallery-23',
+    image: '/assets/gallery-images/photo_6041918426332205618_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205618_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 23'
+  },
+  {
+    id: 'gallery-24',
+    image: '/assets/gallery-images/photo_6041918426332205619_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205619_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 24'
+  },
+  {
+    id: 'gallery-25',
+    image: '/assets/gallery-images/photo_6041918426332205615_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205615_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 25'
+  },
+  {
+    id: 'gallery-26',
+    image: '/assets/gallery-images/photo_6041918426332205616_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205616_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 26'
+  },
+  {
+    id: 'gallery-27',
+    image: '/assets/gallery-images/photo_6041918426332205617_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205617_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 27'
+  },
+  {
+    id: 'gallery-28',
+    image: '/assets/gallery-images/photo_6041918426332205613_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205613_y 1.png',
+    alt: 'Chresthos Foundation community outreach photo 28'
+  },
+
+  // Screenshot 6 (Row 1: 4 portraits, Row 2: 3 posters/events)
+  {
+    id: 'gallery-29',
+    image: '/assets/gallery-images/photo_6041918426332205614_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205614_y 1.png',
+    alt: 'Chresthos Foundation team portrait 1'
+  },
+  {
+    id: 'gallery-30',
+    image: '/assets/gallery-images/photo_6041918426332205611_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205611_y 1.png',
+    alt: 'Chresthos Foundation team portrait 2'
+  },
+  {
+    id: 'gallery-31',
+    image: '/assets/gallery-images/photo_6041918426332205633_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205633_y 1.png',
+    alt: 'Chresthos Foundation mentorship photo'
+  },
+  {
+    id: 'gallery-32',
+    image: '/assets/gallery-images/photo_6041918426332205612_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205612_y 1.png',
+    alt: 'Chresthos Foundation medical healthcare team'
+  },
+  {
+    id: 'gallery-33',
+    image: '/assets/gallery-images/photo_6041918426332205610_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205610_y 1.png',
+    alt: 'The Next Teen Star competition requirements poster'
+  },
+  {
+    id: 'gallery-34',
+    image: '/assets/gallery-images/photo_6041918426332205609_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205609_y 1.png',
+    alt: 'The Next Teen Star about us poster'
+  },
+  {
+    id: 'gallery-35',
+    image: '/assets/gallery-images/photo_6041918426332205608_y 1.png',
+    src: '/assets/gallery-images/photo_6041918426332205608_y 1.png',
+    alt: 'The Next Teen Star concert event'
   }
 ];
