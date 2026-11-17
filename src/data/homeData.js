@@ -124,7 +124,7 @@ export const PARTNERS = [
    {
     id: 'partner-6',
     name: 'Mrs. Princess Abiye',
-    role: 'CEO/FOUNDER OF SPOTON, FILM PRODUCER',
+    role: '',
     image: '/assets/partner-mrs-princess.png',
     pattern: 'diamonds',
     isCutout: true,
@@ -221,16 +221,16 @@ export const TEAM_MEMBERS = [
 
 export const TESTIMONIAL = {
   quote: `“I am pleased to testify to the impactful work of CHRESTHOS FOUNDATION. Their dedication to empowering lives, supporting the vulnerable and serving the community with integrity and compassion - truly commendable. My encounter with the foundation was marked by professionalism, transparency and genuine care. I highly recommend their work to anyone seeking to partner with an organisation that truly makes a difference.”`,
-  author: 'Miss Nwanchukwu Chioma ',
+  author: 'Miss Nwachukwu Chioma ',
   role: 'Nurse Assistance, Health Care Personnel',
-  image: '/assets/Miss-Nwachukwu-Chioma.png',
+  image: '/assets/Miss-Nwanchukwu-Chioma.png',
   rating: 5
 };
 
 export const CONTACT_INFO = {
   address: 'Sparklight estate, Block H, Plot 2, Ibafo. Opposite MFM Ibadan expressway, Ogun State, Nigeria.',
   email: 'chresthosef@gmail.com',
-  phones: ['+2348154101478', '+2348110603135'],
+  phones: ['+2348110603135'],
   whatsapp: ['+447506417508', '+2348154101478'],
   website: 'WWW.CHRESTHOSEMPOWERMENTFOUNDATION.COM',
   copyright: '2026 Chresthos. All rights reserved'
